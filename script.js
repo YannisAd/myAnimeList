@@ -1,26 +1,68 @@
-var $grid = $('#product-list').isotope({
-  // options
-});
-// filter items on button click
-$('.filter-button-group').on('click', 'button', function() {
-  var $button = $(this);
-  
-  // Toggle active class on button
-  $button.toggleClass('active');
-  
-  // Get active filters
-  var activeFilters = [];
-  $('.filter-button-group').find('.active').each(function() {
-    activeFilters.push($(this).attr('data-filter'));
+$(document).ready(function() {
+  var $grid = $('#anime-list').isotope({
+    // options
   });
-  
-  // Combine active filters
-  var filterValue = activeFilters.join('');
-  
-  // Filter items
-  $grid.isotope({ filter: filterValue });
-});
 
+  // Filter items on button click
+  $('.filter-button-group').on('click', 'button', function() {
+    var $button = $(this);
+  
+    // Toggle active class on button
+    $button.toggleClass('active');
+  
+    // Get active filters
+    var activeFilters = [];
+    $('.filter-button-group').find('.active').each(function() {
+      activeFilters.push($(this).attr('data-filter'));
+    });
+  
+    // Combine active filters
+    var filterValue = activeFilters.join('');
+  
+    // Filter items
+    $grid.isotope({ filter: filterValue });
+  });
+
+  // Event handler for search bar input
+  $("#search-bar").on("input", function() {
+    var searchTerm = $(this).val().toLowerCase();
+
+    // Filter items based on search term
+    $grid.isotope({
+      filter: function() {
+        var title = $(this).find("#titre").text().toLowerCase();
+        return title.includes(searchTerm);
+      }
+    });
+  });
+
+  // Popup details creation
+  $(".product-item").click(function() {
+    var title = $(this).find("#titre").text();
+    var synopsis = $(this).find("#synopsis").text();
+    var imgUrl = $(this).find(".product-img img").attr("src");
+
+    var popupContent = `
+      <div class="popup-content">
+        <button class="close-btn">Fermer</button>
+        <img src="${imgUrl}" class="popup-img">
+        <h2>${title}</h2>
+        <p>${synopsis}</p>
+      </div>
+    `;
+
+    $("body").append('<div class="popup">' + popupContent + '</div>');
+    $(".popup").hide().fadeIn();
+
+    $(".popup, .close-btn").click(function(event) {
+      if (!$(event.target).closest(".popup-content").length || $(event.target).hasClass("close-btn")) {
+        $(".popup").fadeOut(function() {
+          $(this).remove();
+        });
+      }
+    });
+  });
+});
 
 
 /* Si utilisation d'une API ici Jikan REST
