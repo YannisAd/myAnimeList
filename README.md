@@ -1,4 +1,4 @@
-**Anime List Project**
+****Anime List Project********
 
 This project is a dynamic anime list that allows you to keep track of the anime you have watched. It provides filtering and search functionalities to easily find and organize your anime entries. The data for this project is retrieved from the MyAnimeList API.
 
