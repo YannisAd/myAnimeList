@@ -42,6 +42,53 @@ body {
     color: #fff!important;
 }
 
-span.stars {
+span#note {
     color: gold;
+}
+
+button.close-btn {
+    float: right;
+    width: 50px;
+    background: white;}
+
+
+.product-item {
+    cursor: pointer;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    display: none;
+    z-index: 9999;
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.popup-img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+
+.product-content.text-center.py-3.float-end {
+    width: 43%;
+    
+    margin-top: 23%;
+}
+
+
+
+img.img-fluid.d-block.mx-auto {
+    height: 318px;
+    width: auto;
 }

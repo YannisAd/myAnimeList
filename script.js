@@ -43,12 +43,19 @@ $(document).ready(function() {
     var imgUrl = $(this).find(".product-img img").attr("src");
 
     var popupContent = `
+    <button class="close-btn">
+    <img src="images/close.svg" alt="Fermer">
+  </button>
+  
+  
+  
       <div class="popup-content">
-        <button class="close-btn">Fermer</button>
         <img src="${imgUrl}" class="popup-img">
         <h2>${title}</h2>
         <p>${synopsis}</p>
+
       </div>
+
     `;
 
     $("body").append('<div class="popup">' + popupContent + '</div>');
