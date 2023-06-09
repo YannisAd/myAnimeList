@@ -7,11 +7,11 @@ This project is a dynamic anime list that allows you to keep track of the anime 
 
 ## Features 
 
-List and display anime entries with relevant details such as title, episodes, synopsis, and more.
-Filter the anime list based on different categories using the provided filter tools.
-Search for specific anime titles using the search bar.
-Click on an anime card to view detailed information in a popup.
-Close the popup by clicking on the close button or outside the popup area.
+- List and display anime entries with relevant details such as title, episodes, synopsis, and more.
+- Filter the anime list based on different categories using the provided filter tools.
+- Search for specific anime titles using the search bar.
+- Click on an anime card to view detailed information in a popup.
+- Close the popup by clicking on the close button or outside the popup area.
 
 
 ## Getting Started
