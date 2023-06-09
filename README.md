@@ -35,7 +35,21 @@ Les contributions à ce projet sont les bienvenues. Si vous avez des améliorati
 Ce projet utilise l'API MyAnimeList et l'API Jikan. Un grand merci aux développeurs et contributeurs de ces API pour la fourniture des données utilisées dans ce projet.
 
 
-**============================================================================================**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Anime List Project
 
