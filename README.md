@@ -4,6 +4,18 @@ AnimeList est un site contenant une liste d'anime dynamique qui vous permet de s
 
 **Remarque :** Il s'agit d'une version de test du projet, et à des fins de démonstration, les données ont été obtenues à l'aide de l'API gratuite Jikan et stockées dans un fichier JSON.
 
+## Instructions
+
+Pour **visualiser** la liste des animes, veuillez cliquer sur le fichier **index.html**.
+
+Si vous souhaitez **ajouter un nouvel anime** à la liste, suivez les étapes suivantes :
+
+- Trouvez l'**ID** de l'anime sur **[ MyAnimeList](https://myanimelist.net) **.
+
+- Lancez le fichier **add_anime.py** en utilisant la commande suivante dans votre terminal :
+
+~python add_anime.py~
+
 ## Fonctionnalités
 
 - Afficher et lister les entrées d'anime avec des détails pertinents tels que le titre, les épisodes, le synopsis, et plus encore.
@@ -59,6 +71,16 @@ Ce projet utilise l'API MyAnimeList et l'API Jikan. Un grand merci aux développ
 This project is a dynamic anime list that allows you to keep track of the anime you have watched. It provides filtering and search functionalities to easily find and organize your anime entries. The data for this project is retrieved from the MyAnimeList API.
 
 **Note :** This is a test version of the project, and for demonstration purposes, the data has been obtained using the free Jikan API and stored in a JSON file.
+
+## Instructions
+
+To **view the anime list**, please click on the **index.html** file.
+
+If you want to **add a new anime** to the list, follow these steps:
+
+- Find the **ID** on **[ MyAnimeList](https://myanimelist.net) **.
+- Run the **add_anime.py** file using the following command in your terminal:
+~python add_anime.py~
 
 
 ## Features 
