@@ -92,3 +92,7 @@ img.img-fluid.d-block.mx-auto {
     height: 318px;
     width: auto;
 }
+
+img.popup-img {
+    margin-left: 5% !important;
+}

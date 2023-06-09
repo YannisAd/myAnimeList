@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,17 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Filter</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./javascript/script.js"></script>
 </head>
 <body>
-    
-    <div class = "container">
-        <div class = "row">
-            <div class = "col text-center my-4">
-                <h1 class = "fs-2" id="test">Mes animes</h1>
-                <div class = "underline mx-auto mt-3"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col text-center my-4">
+                <h1 class="fs-2" id="test">Mes animes</h1>
+                <div class="underline mx-auto mt-3"></div>
             </div>
         </div>
 
@@ -24,1148 +22,1026 @@
             <div class="col d-flex justify-content-center">
               <input type="text" id="search-bar" class="form-control" placeholder="Rechercher par titre">
             </div>
-          </div>
-          
+        </div>
 
-        <div class = "row mt-3 mb-4 button-group filter-button-group">
-            <div class = "col d-flex justify-content-center">
-                <button type = "button" data-filter = "*" class = "btn btn-primary mx-1 text-dark">All</button>
-                <button type = "button" data-filter = ".action" class = "btn btn-primary mx-1 text-dark">Action</button>
-                <button type = "button" data-filter = ".fantasy" class = "btn btn-primary mx-1 text-dark">Fantasy</button>
-                <button type = "button" data-filter = ".ecchi" class = "btn btn-primary mx-1 text-dark">Ecchi</button>
-                <button type = "button" data-filter = ".romance" class = "btn btn-primary mx-1 text-dark">Romance</button>
-                <button type = "button" data-filter = ".award-winning" class = "btn btn-primary mx-1 text-dark">Award-Winning</button>
-
-
-                
+        <div class="row mt-3 mb-4 button-group filter-button-group">
+            <div class="col d-flex justify-content-center">
+                <button type="button" data-filter="*" class="btn btn-primary mx-1 text-dark">All</button>
+                <button type="button" data-filter=".action" class="btn btn-primary mx-1 text-dark">Action</button>
+                <button type="button" data-filter=".fantasy" class="btn btn-primary mx-1 text-dark">Fantasy</button>
+                <button type="button" data-filter=".ecchi" class="btn btn-primary mx-1 text-dark">Ecchi</button>
+                <button type="button" data-filter=".romance" class="btn btn-primary mx-1 text-dark">Romance</button>
+                <button type="button" data-filter=".award-winning" class="btn btn-primary mx-1 text-dark">Award-Winning</button>
             </div>
         </div>
 
         <div class="row justify-content-center g-4" id="anime-list">
     <div class="col-lg-4 col-md-6 action adventure fantasy">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/6/73245.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">One Piece</span>
-            <span id="synopsis" style="display:none;">Gol D. Roger was known as the "Pirate King," the strongest and most infamous being to have sailed the Grand Line. The capture and execution of Roger by the World Government brought a change throughout the world. His last words before his death revealed the existence of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece—which promises an unlimited amount of riches and fame—and quite possibly the pinnacle of glory and the title of the Pirate King.
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/6/73245.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">One Piece</span>
+                <span id="synopsis" style="display:none;">Gol D. Roger was known as the "Pirate King," the strongest and most infamous being to have sailed the Grand Line. The capture and execution of Roger by the World Government brought a change throughout the world. His last words before his death revealed the existence of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece—which promises an unlimited amount of riches and fame—and quite possibly the pinnacle of glory and the title of the Pirate King.
 
 Enter Monkey D. Luffy, a 17-year-old boy who defies your standard definition of a pirate. Rather than the popular persona of a wicked, hardened, toothless pirate ransacking villages for fun, Luffy's reason for being a pirate is one of pure wonder: the thought of an exciting adventure that leads him to intriguing people and ultimately, the promised treasure. Following in the footsteps of his childhood hero, Luffy and his crew travel across the Grand Line, experiencing crazy adventures, unveiling dark mysteries and battling strong enemies, all in order to reach the most coveted of all fortunes—One Piece.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 24 min</span>
-            <span class="d-block w-100">Genres: Action, Adventure, Fantasy</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 24 min</span>
+                <span class="d-block w-100">Genres: Action, Adventure, Fantasy</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
-    <div class="col-lg-4 col-md-6 action award-winning fantasy">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/1171/109222.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Jujutsu Kaisen</span>
-            <span id="synopsis" style="display:none;">Idly indulging in baseless paranormal activities with the Occult Club, high schooler Yuuji Itadori spends his days at either the clubroom or the hospital, where he visits his bedridden grandfather. However, this leisurely lifestyle soon takes a turn for the strange when he unknowingly encounters a cursed item. Triggering a chain of supernatural occurrences, Yuuji finds himself suddenly thrust into the world of Curses—dreadful beings formed from human malice and negativity—after swallowing the said item, revealed to be a finger belonging to the demon Sukuna Ryoumen, the "King of Curses."
+    <div class="col-lg-4 col-md-6 action award winning fantasy">
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/1171/109222.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Jujutsu Kaisen</span>
+                <span id="synopsis" style="display:none;">Idly indulging in baseless paranormal activities with the Occult Club, high schooler Yuuji Itadori spends his days at either the clubroom or the hospital, where he visits his bedridden grandfather. However, this leisurely lifestyle soon takes a turn for the strange when he unknowingly encounters a cursed item. Triggering a chain of supernatural occurrences, Yuuji finds himself suddenly thrust into the world of Curses—dreadful beings formed from human malice and negativity—after swallowing the said item, revealed to be a finger belonging to the demon Sukuna Ryoumen, the "King of Curses."
 
 Yuuji experiences first-hand the threat these Curses pose to society as he discovers his own newfound powers. Introduced to the Tokyo Metropolitan Jujutsu Technical High School, he begins to walk down a path from which he cannot return—the path of a Jujutsu sorcerer.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 23 min</span>
-            <span class="d-block w-100">Genres: Action, Award-Winning, Fantasy</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 23 min per ep</span>
+                <span class="d-block w-100">Genres: Action, Award Winning, Fantasy</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 action sci-fi">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/1468/109172.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Akudama Drive</span>
-            <span id="synopsis" style="display:none;">The bustling metropolis of Kansai, where cybernetic screens litter the neon landscape, may seem like a technological utopia at first glance. But in the dark alleys around the brightly-lit buildings, an unforgiving criminal underbelly still exists in the form of fugitives known as "Akudama." 
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/1468/109172.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Akudama Drive</span>
+                <span id="synopsis" style="display:none;">The bustling metropolis of Kansai, where cybernetic screens litter the neon landscape, may seem like a technological utopia at first glance. But in the dark alleys around the brightly-lit buildings, an unforgiving criminal underbelly still exists in the form of fugitives known as "Akudama." 
 
 No stranger to these individuals, Kansai police begin the countdown to the public execution of an infamous Akudama "Cutthroat," guilty of killing 999 people. However, a mysterious message is sent to several elite Akudama, enlisting them to free Cutthroat for a substantial amount of money. An invisible hand seeks to gather these dangerous personas in one place, ensuring that the execution is well underway to becoming a full-blown bloodbath.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 24 min</span>
-            <span class="d-block w-100">Genres: Action, Sci-Fi</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 24 min per ep</span>
+                <span class="d-block w-100">Genres: Action, Sci-Fi</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 sports">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/1924/109353.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Baki: Dai Raitaisai-hen</span>
-            <span id="synopsis" style="display:none;">Weakened by the poison from his last battle, Baki Hanma finds himself on the verge of death with no salvation in sight. However, after Baki's friend, Retsu Kaiou, brings him to China, he learns about the centurial Raitai Tournament, where the fiercest warriors fight to be crowned as the strongest martial artist in all of China. 
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/1924/109353.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Baki: Dai Raitaisai-hen</span>
+                <span id="synopsis" style="display:none;">Weakened by the poison from his last battle, Baki Hanma finds himself on the verge of death with no salvation in sight. However, after Baki's friend, Retsu Kaiou, brings him to China, he learns about the centurial Raitai Tournament, where the fiercest warriors fight to be crowned as the strongest martial artist in all of China. 
 
 As it is now allowing entry to foreigners, Baki is informed that he will have to compete in the tournament as it holds the cure to his illness. Unfortunately, Baki's father, deemed the "Strongest Creature on Earth," is participating too. Baki 2nd Season details the events of the grand Chinese tournament, as well as Baki's encounter with the eccentric yet powerful Mohammad Alai Jr.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 24 min</span>
-            <span class="d-block w-100">Genres: Sports</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 24 min per ep</span>
+                <span class="d-block w-100">Genres: Sports</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 action mystery sci-fi">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/1292/94693.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Black Bullet</span>
-            <span id="synopsis" style="display:none;">In the year 2021, a parasitic virus known as "Gastrea" infects humans and turns them into monsters. What is left of mankind now lives within the Monolith walls, walls that are made of Varanium, the only material that can hurt Gastrea.
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/1292/94693.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Black Bullet</span>
+                <span id="synopsis" style="display:none;">In the year 2021, a parasitic virus known as "Gastrea" infects humans and turns them into monsters. What is left of mankind now lives within the Monolith walls, walls that are made of Varanium, the only material that can hurt Gastrea.
 
 To counter the threat that the Gastrea pose, "Cursed Children"—female children whose bodies contain trace amounts of the virus which grant them superhuman abilities—officially called Initiators by the Tendo Civil Security, are given partners called Promoters, people who work to guide and protect the young Initiators. These teams of two are sent out on missions to fight the monsters created by the Gastrea virus and keep them at bay. 
 
 Black Bullet revolves around the team of Enju Aihara, an Initiator, and Satomi Rentaro, a Promoter, as they go on missions to fight the growing threat of Gastrea in their hometown of Tokyo.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 24 min</span>
-            <span class="d-block w-100">Genres: Action, Mystery, Sci-Fi</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 24 min per ep</span>
+                <span class="d-block w-100">Genres: Action, Mystery, Sci-Fi</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 action">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/1906/121592.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Black Lagoon</span>
-            <span id="synopsis" style="display:none;">Salaryman Rokurou Okajima spends his days trying to climb his company's corporate ladder, until one day when a business negotiation in Thailand goes awry. During the botched deal, he falls hostage to the Lagoon Company—a band of ruthless pirate mercenaries. Left to the whims of his captors after his managers refuse to pay his ransom, Rokurou does the unthinkable: instead of begging for his life, he joins the very crew who kidnapped him.
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/1906/121592.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Black Lagoon</span>
+                <span id="synopsis" style="display:none;">Salaryman Rokurou Okajima spends his days trying to climb his company's corporate ladder, until one day when a business negotiation in Thailand goes awry. During the botched deal, he falls hostage to the Lagoon Company—a band of ruthless pirate mercenaries. Left to the whims of his captors after his managers refuse to pay his ransom, Rokurou does the unthinkable: instead of begging for his life, he joins the very crew who kidnapped him.
 
 Now a member of the group, Rokurou must adjust to his new residence in the dissolute hellscape known as Roanapur, a city where corruption and crime run rampant, and even the smallest slipup could cost him his life. If not for one of the many crime syndicates on the island, Rokurou also constantly finds himself at odds with his brash, gunslinging colleague, Revy. 
 
 As Rokurou struggles to abandon his past—and with more than just the profits from the Lagoon Company's illegal trading on the line—he must quickly find the resolve to make tough decisions in high-stress situations while keeping his humanity intact.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 23 min</span>
-            <span class="d-block w-100">Genres: Action</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 23 min per ep</span>
+                <span class="d-block w-100">Genres: Action</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 action adventure fantasy">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/3/40451.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Bleach</span>
-            <span id="synopsis" style="display:none;">Ichigo Kurosaki is an ordinary high schooler—until his family is attacked by a Hollow, a corrupt spirit that seeks to devour human souls. It is then that he meets a Soul Reaper named Rukia Kuchiki, who gets injured while protecting Ichigo's family from the assailant. To save his family, Ichigo accepts Rukia's offer of taking her powers and becomes a Soul Reaper as a result.
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/3/40451.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Bleach</span>
+                <span id="synopsis" style="display:none;">Ichigo Kurosaki is an ordinary high schooler—until his family is attacked by a Hollow, a corrupt spirit that seeks to devour human souls. It is then that he meets a Soul Reaper named Rukia Kuchiki, who gets injured while protecting Ichigo's family from the assailant. To save his family, Ichigo accepts Rukia's offer of taking her powers and becomes a Soul Reaper as a result.
 
 However, as Rukia is unable to regain her powers, Ichigo is given the daunting task of hunting down the Hollows that plague their town. However, he is not alone in his fight, as he is later joined by his friends—classmates Orihime Inoue, Yasutora Sado, and Uryuu Ishida—who each have their own unique abilities. As Ichigo and his comrades get used to their new duties and support each other on and off the battlefield, the young Soul Reaper soon learns that the Hollows are not the only real threat to the human world.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 24 min</span>
-            <span class="d-block w-100">Genres: Action, Adventure, Fantasy</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 24 min per ep</span>
+                <span class="d-block w-100">Genres: Action, Adventure, Fantasy</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 action fantasy">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/10/75195.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Ao no Exorcist</span>
-            <span id="synopsis" style="display:none;">Humans and demons are two sides of the same coin, as are Assiah and Gehenna, their respective worlds. The only way to travel between the realms is by the means of possession, like in ghost stories. However, Satan, the ruler of Gehenna, cannot find a suitable host to possess and therefore, remains imprisoned in his world. In a desperate attempt to conquer Assiah, he sends his son instead, intending for him to eventually grow into a vessel capable of possession by the demon king.
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/10/75195.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Ao no Exorcist</span>
+                <span id="synopsis" style="display:none;">Humans and demons are two sides of the same coin, as are Assiah and Gehenna, their respective worlds. The only way to travel between the realms is by the means of possession, like in ghost stories. However, Satan, the ruler of Gehenna, cannot find a suitable host to possess and therefore, remains imprisoned in his world. In a desperate attempt to conquer Assiah, he sends his son instead, intending for him to eventually grow into a vessel capable of possession by the demon king.
 
 Ao no Exorcist follows Rin Okumura who appears to be an ordinary, somewhat troublesome teenager—that is until one day he is ambushed by demons. His world turns upside down when he discovers that he is in fact the very son of Satan and that his demon father wishes for him to return so they can conquer Assiah together. Not wanting to join the king of Gehenna, Rin decides to begin training to become an exorcist so that he can fight to defend Assiah alongside his brother Yukio.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 24 min</span>
-            <span class="d-block w-100">Genres: Action, Fantasy</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 24 min per ep</span>
+                <span class="d-block w-100">Genres: Action, Fantasy</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 action comedy fantasy">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/11/47677.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Blood Lad</span>
-            <span id="synopsis" style="display:none;">Staz Charlie Blood is a powerful vampire who rules the Eastern district of Demon World. According to rumors, he is a bloodthirsty and merciless monster, but in reality, Staz is just an otaku obsessed with Japanese culture and completely uninterested in human blood. Leaving the management of his territory to his underlings, Staz spends his days lazing around, indulging in anime, manga, and games.
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/11/47677.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Blood Lad</span>
+                <span id="synopsis" style="display:none;">Staz Charlie Blood is a powerful vampire who rules the Eastern district of Demon World. According to rumors, he is a bloodthirsty and merciless monster, but in reality, Staz is just an otaku obsessed with Japanese culture and completely uninterested in human blood. Leaving the management of his territory to his underlings, Staz spends his days lazing around, indulging in anime, manga, and games.
 
 When Fuyumi Yanagi, a Japanese girl, accidentally wanders through a portal leading into the demon world, Staz is overjoyed. But just as he is starting to feel an unusual attraction to her, his territory is attacked, resulting in Fuyumi's untimely death. She turns into a wandering ghost and the crestfallen Staz vows to resurrect her as this would mean being able to travel to the human world, something he has always dreamed of.
 
 Blood Lad follows Staz and Fuyumi, soon joined by the spatial magician Bell and the half-werewolf Wolf, as they travel to find a magic that can bring humans back to life.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 24 min</span>
-            <span class="d-block w-100">Genres: Action, Comedy, Fantasy</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 24 min per ep</span>
+                <span class="d-block w-100">Genres: Action, Comedy, Fantasy</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 action fantasy">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/1993/108967.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Burn the Witch</span>
-            <span id="synopsis" style="display:none;">Although citizens of London view dragons as a fairy-tale myth, statistics confirm that 72% of the city's deaths are caused by these grotesque beings. Unable to see them, the public is oblivious to their existence. However, in a mirror dimension to "Front London," exists a place where dragons can be seen with the naked eye—"Reverse London."
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/1993/108967.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Burn the Witch</span>
+                <span id="synopsis" style="display:none;">Although citizens of London view dragons as a fairy-tale myth, statistics confirm that 72% of the city's deaths are caused by these grotesque beings. Unable to see them, the public is oblivious to their existence. However, in a mirror dimension to "Front London," exists a place where dragons can be seen with the naked eye—"Reverse London."
 
 Ninny Spangcole is a member of a popular girl group. But in Reverse London, she works as a "Witch" at Wing Bind—an organization that dispatches agents to exterminate the beasts and protect the citizens of both Londons using magic. Ninny and her partner, Noel Niihashi, in addition to their jobs, safeguard Baldo Ywain Parks, a young man with an odd connection to the dragons.
 
 Thanks to the Wing Bind's hard work, there were no fatal dragon attacks for almost a century. But the peace shatters when Baldo's presence unexpectedly causes a Dark Dragon to wreak havoc in the city. The witches are further inconvenienced when Ninny's troublesome former bandmate appears in Reverse London—in tandem with another powerful dragon.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 21 min</span>
-            <span class="d-block w-100">Genres: Action, Fantasy</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 21 min per ep</span>
+                <span class="d-block w-100">Genres: Action, Fantasy</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
-    <div class="col-lg-4 col-md-6 action award-winning sci-fi">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/4/19644.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Cowboy Bebop</span>
-            <span id="synopsis" style="display:none;">Crime is timeless. By the year 2071, humanity has expanded across the galaxy, filling the surface of other planets with settlements like those on Earth. These new societies are plagued by murder, drug use, and theft, and intergalactic outlaws are hunted by a growing number of tough bounty hunters.
+    <div class="col-lg-4 col-md-6 action award winning sci-fi">
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/4/19644.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Cowboy Bebop</span>
+                <span id="synopsis" style="display:none;">Crime is timeless. By the year 2071, humanity has expanded across the galaxy, filling the surface of other planets with settlements like those on Earth. These new societies are plagued by murder, drug use, and theft, and intergalactic outlaws are hunted by a growing number of tough bounty hunters.
 
 Spike Spiegel and Jet Black pursue criminals throughout space to make a humble living. Beneath his goofy and aloof demeanor, Spike is haunted by the weight of his violent past. Meanwhile, Jet manages his own troubled memories while taking care of Spike and the Bebop, their ship. The duo is joined by the beautiful con artist Faye Valentine, odd child Edward Wong Hau Pepelu Tivrusky IV, and Ein, a bioengineered Welsh Corgi.
 
 While developing bonds and working to catch a colorful cast of criminals, the Bebop crew's lives are disrupted by a menace from Spike's past. As a rival's maniacal plot continues to unravel, Spike must choose between life with his newfound family or revenge for his old wounds.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 24 min</span>
-            <span class="d-block w-100">Genres: Action, Award-Winning, Sci-Fi</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 24 min per ep</span>
+                <span class="d-block w-100">Genres: Action, Award Winning, Sci-Fi</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 action drama romance sci-fi">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/1614/90408.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Darling in the FranXX</span>
-            <span id="synopsis" style="display:none;">In the distant future, humanity has been driven to near-extinction by giant beasts known as Klaxosaurs, forcing the surviving humans to take refuge in massive fortress cities called Plantations. Children raised here are trained to pilot giant mechas known as FranXX—the only weapons known to be effective against the Klaxosaurs—in boy-girl pairs. Bred for the sole purpose of piloting these machines, these children know nothing of the outside world and are only able to prove their existence by defending their race.  
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/1614/90408.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Darling in the FranXX</span>
+                <span id="synopsis" style="display:none;">In the distant future, humanity has been driven to near-extinction by giant beasts known as Klaxosaurs, forcing the surviving humans to take refuge in massive fortress cities called Plantations. Children raised here are trained to pilot giant mechas known as FranXX—the only weapons known to be effective against the Klaxosaurs—in boy-girl pairs. Bred for the sole purpose of piloting these machines, these children know nothing of the outside world and are only able to prove their existence by defending their race.  
 
 Hiro, an aspiring FranXX pilot, has lost his motivation and self-confidence after failing an aptitude test. Skipping out on his class' graduation ceremony, Hiro retreats to a forest lake, where he encounters a mysterious girl with two horns growing out of her head. She introduces herself by her codename Zero Two, which is known to belong to an infamous FranXX pilot known as the "Partner Killer." Before Hiro can digest the encounter, the Plantation is rocked by a sudden Klaxosaur attack. Zero Two engages the creature in her FranXX, but it is heavily damaged in the skirmish and crashes near Hiro. Finding her partner dead, Zero Two invites Hiro to pilot the mecha with her, and the duo easily defeats the Klaxosaur in the ensuing fight. With a new partner by his side, Hiro has been given a chance at redemption for his past failures, but at what cost?
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 24 min</span>
-            <span class="d-block w-100">Genres: Action, Drama, Romance, Sci-Fi</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 24 min per ep</span>
+                <span class="d-block w-100">Genres: Action, Drama, Romance, Sci-Fi</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 supernatural suspense">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/9/9453.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Death Note</span>
-            <span id="synopsis" style="display:none;">Brutal murders, petty thefts, and senseless violence pollute the human world. In contrast, the realm of death gods is a humdrum, unchanging gambling den. The ingenious 17-year-old Japanese student Light Yagami and sadistic god of death Ryuk share one belief: their worlds are rotten.
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/9/9453.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Death Note</span>
+                <span id="synopsis" style="display:none;">Brutal murders, petty thefts, and senseless violence pollute the human world. In contrast, the realm of death gods is a humdrum, unchanging gambling den. The ingenious 17-year-old Japanese student Light Yagami and sadistic god of death Ryuk share one belief: their worlds are rotten.
 
 For his own amusement, Ryuk drops his Death Note into the human world. Light stumbles upon it, deeming the first of its rules ridiculous: the human whose name is written in this note shall die. However, the temptation is too great, and Light experiments by writing a felon's name, which disturbingly enacts his first murder.
 
 Aware of the terrifying godlike power that has fallen into his hands, Light—under the alias Kira—follows his wicked sense of justice with the ultimate goal of cleansing the world of all evil-doers. The meticulous mastermind detective L is already on his trail, but as Light's brilliance rivals L's, the grand chase for Kira turns into an intense battle of wits that can only end when one of them is dead.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 23 min</span>
-            <span class="d-block w-100">Genres: Supernatural, Suspense</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 23 min per ep</span>
+                <span class="d-block w-100">Genres: Supernatural, Suspense</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 drama supernatural suspense">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/5/71553.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Death Parade</span>
-            <span id="synopsis" style="display:none;">After death, either Heaven or Hell awaits most humans. But for a select few, death brings them to Quindecim—a bar where only pairs of people who die at the same time can enter. Attending the bar is an enigmatic figure known as Decim, who also acts as the arbiter. He passes judgment on those who wind up at Quindecim by challenging them to a life-threatening game. These games determine if the patron's soul will reincarnate into a new life, or be sent into the void, never to be seen again.
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/5/71553.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Death Parade</span>
+                <span id="synopsis" style="display:none;">After death, either Heaven or Hell awaits most humans. But for a select few, death brings them to Quindecim—a bar where only pairs of people who die at the same time can enter. Attending the bar is an enigmatic figure known as Decim, who also acts as the arbiter. He passes judgment on those who wind up at Quindecim by challenging them to a life-threatening game. These games determine if the patron's soul will reincarnate into a new life, or be sent into the void, never to be seen again.
 
 From darts and bowling to fighting games, the true nature of each patron slowly comes to light as they wager their souls. Though his methods remain unchanged, the sudden appearance of a black-haired amnesiac causes Decim to reevaluate his own rulings.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 23 min</span>
-            <span class="d-block w-100">Genres: Drama, Supernatural, Suspense</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 23 min per ep</span>
+                <span class="d-block w-100">Genres: Drama, Supernatural, Suspense</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
-    <div class="col-lg-4 col-md-6 action award-winning fantasy">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/1286/99889.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Kimetsu no Yaiba</span>
-            <span id="synopsis" style="display:none;">Ever since the death of his father, the burden of supporting the family has fallen upon Tanjirou Kamado's shoulders. Though living impoverished on a remote mountain, the Kamado family are able to enjoy a relatively peaceful and happy life. One day, Tanjirou decides to go down to the local village to make a little money selling charcoal. On his way back, night falls, forcing Tanjirou to take shelter in the house of a strange man, who warns him of the existence of flesh-eating demons that lurk in the woods at night.
+    <div class="col-lg-4 col-md-6 action award winning fantasy">
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/1286/99889.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Kimetsu no Yaiba</span>
+                <span id="synopsis" style="display:none;">Ever since the death of his father, the burden of supporting the family has fallen upon Tanjirou Kamado's shoulders. Though living impoverished on a remote mountain, the Kamado family are able to enjoy a relatively peaceful and happy life. One day, Tanjirou decides to go down to the local village to make a little money selling charcoal. On his way back, night falls, forcing Tanjirou to take shelter in the house of a strange man, who warns him of the existence of flesh-eating demons that lurk in the woods at night.
 
 When he finally arrives back home the next day, he is met with a horrifying sight—his whole family has been slaughtered. Worse still, the sole survivor is his sister Nezuko, who has been turned into a bloodthirsty demon. Consumed by rage and hatred, Tanjirou swears to avenge his family and stay by his only remaining sibling. Alongside the mysterious group calling themselves the Demon Slayer Corps, Tanjirou will do whatever it takes to slay the demons and protect the remnants of his beloved sister's humanity.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 23 min</span>
-            <span class="d-block w-100">Genres: Action, Award-Winning, Fantasy</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 23 min per ep</span>
+                <span class="d-block w-100">Genres: Action, Award Winning, Fantasy</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 action avant garde horror supernatural">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/2/89973.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Devilman: Crybaby</span>
-            <span id="synopsis" style="display:none;">Devils cannot take form without a living host. However, if the will of an individual is strong enough, they can overcome the demon and make its power their own, becoming a Devilman.
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/2/89973.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Devilman: Crybaby</span>
+                <span id="synopsis" style="display:none;">Devils cannot take form without a living host. However, if the will of an individual is strong enough, they can overcome the demon and make its power their own, becoming a Devilman.
 
 Weak and unassuming, Akira Fudou has always had a bleeding heart. So when his childhood friend Ryou Asuka asks for his help in uncovering devils, Akira accepts without hesitation. However, to Akira's surprise, the place they go to is Sabbath: an immoral party of debauchery and degeneracy. Amidst bloodshed and death, demons possess the partiers, turning their bodies into grotesque monsters, and begin wreaking havoc. In a reckless attempt to save his best friend, Akira unwittingly merges with the devil Amon and becomes a Devilman, gaining the power to defeat the remaining demons.
 
 Though it grants him great power, this new partnership awakens an insatiable and primeval part of Akira. Having the body of a devil but the same crybaby heart, Akira works alongside Ryou, destroying those that harm humanity and his loved ones.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 25 min</span>
-            <span class="d-block w-100">Genres: Action, Avant Garde, Horror, Supernatural</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 25 min per ep</span>
+                <span class="d-block w-100">Genres: Action, Avant Garde, Horror, Supernatural</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 mystery supernatural suspense">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/10/77957.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Boku dake ga Inai Machi</span>
-            <span id="synopsis" style="display:none;">When tragedy is about to strike, Satoru Fujinuma finds himself sent back several minutes before the accident occurs. The detached, 29-year-old manga artist has taken advantage of this powerful yet mysterious phenomenon, which he calls "Revival," to save many lives.
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/10/77957.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Boku dake ga Inai Machi</span>
+                <span id="synopsis" style="display:none;">When tragedy is about to strike, Satoru Fujinuma finds himself sent back several minutes before the accident occurs. The detached, 29-year-old manga artist has taken advantage of this powerful yet mysterious phenomenon, which he calls "Revival," to save many lives.
  
 However, when he is wrongfully accused of murdering someone close to him, Satoru is sent back to the past once again, but this time to 1988, 18 years in the past. Soon, he realizes that the murder may be connected to the abduction and killing of one of his classmates, the solitary and mysterious Kayo Hinazuki, that took place when he was a child. This is his chance to make things right.
  
 Boku dake ga Inai Machi follows Satoru in his mission to uncover what truly transpired 18 years ago and prevent the death of his classmate while protecting those he cares about in the present.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 23 min</span>
-            <span class="d-block w-100">Genres: Mystery, Supernatural, Suspense</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 23 min per ep</span>
+                <span class="d-block w-100">Genres: Mystery, Supernatural, Suspense</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 action adventure drama fantasy">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/1208/94745.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Fullmetal Alchemist: Brotherhood</span>
-            <span id="synopsis" style="display:none;">After a horrific alchemy experiment goes wrong in the Elric household, brothers Edward and Alphonse are left in a catastrophic new reality. Ignoring the alchemical principle banning human transmutation, the boys attempted to bring their recently deceased mother back to life. Instead, they suffered brutal personal loss: Alphonse's body disintegrated while Edward lost a leg and then sacrificed an arm to keep Alphonse's soul in the physical realm by binding it to a hulking suit of armor.
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/1208/94745.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Fullmetal Alchemist: Brotherhood</span>
+                <span id="synopsis" style="display:none;">After a horrific alchemy experiment goes wrong in the Elric household, brothers Edward and Alphonse are left in a catastrophic new reality. Ignoring the alchemical principle banning human transmutation, the boys attempted to bring their recently deceased mother back to life. Instead, they suffered brutal personal loss: Alphonse's body disintegrated while Edward lost a leg and then sacrificed an arm to keep Alphonse's soul in the physical realm by binding it to a hulking suit of armor.
 
 The brothers are rescued by their neighbor Pinako Rockbell and her granddaughter Winry. Known as a bio-mechanical engineering prodigy, Winry creates prosthetic limbs for Edward by utilizing "automail," a tough, versatile metal used in robots and combat armor. After years of training, the Elric brothers set off on a quest to restore their bodies by locating the Philosopher's Stone—a powerful gem that allows an alchemist to defy the traditional laws of Equivalent Exchange.
 
 As Edward becomes an infamous alchemist and gains the nickname "Fullmetal," the boys' journey embroils them in a growing conspiracy that threatens the fate of the world.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 24 min</span>
-            <span class="d-block w-100">Genres: Action, Adventure, Drama, Fantasy</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 24 min per ep</span>
+                <span class="d-block w-100">Genres: Action, Adventure, Drama, Fantasy</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 action drama horror sci-fi">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/13/5998.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Gantz</span>
-            <span id="synopsis" style="display:none;">Thought your life was bad? Sometimes, death is worse. There is no salvation, peace, nor god waiting to receive you into their care. But wait, a god? Maybe you are talking about that big black ball stuck in the room with you. Now you are thrown into a game, fighting green aliens and robot monsters for the chance to survive.
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/13/5998.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Gantz</span>
+                <span id="synopsis" style="display:none;">Thought your life was bad? Sometimes, death is worse. There is no salvation, peace, nor god waiting to receive you into their care. But wait, a god? Maybe you are talking about that big black ball stuck in the room with you. Now you are thrown into a game, fighting green aliens and robot monsters for the chance to survive.
 
 When Kei Kurono is killed, he thus finds himself caught in such a game—a test of his skills, morals, and will to survive. His life is not his own; his death is spat and trampled upon over and over again. What happens if he does not listen? God knows.
 
 A word of warning: Gantz is not for the faint-hearted, but neither is it as simple as it looks. Gore, rape, and violence is rampant, as are portrayals of greed, violence, and all the ugliness that one sees in society today.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 22 min</span>
-            <span class="d-block w-100">Genres: Action, Drama, Horror, Sci-Fi</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 22 min per ep</span>
+                <span class="d-block w-100">Genres: Action, Drama, Horror, Sci-Fi</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 action fantasy">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/1722/107269.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">The God of High School</span>
-            <span id="synopsis" style="display:none;">The "God of High School" tournament has begun, seeking out the greatest fighter among Korean high school students! All martial arts styles, weapons, means, and methods of attaining victory are permitted. The prize? One wish for anything desired by the winner.
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/1722/107269.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">The God of High School</span>
+                <span id="synopsis" style="display:none;">The "God of High School" tournament has begun, seeking out the greatest fighter among Korean high school students! All martial arts styles, weapons, means, and methods of attaining victory are permitted. The prize? One wish for anything desired by the winner.
 
 Taekwondo expert Jin Mo-Ri is invited to participate in the competition. There he befriends karate specialist Han Dae-Wi and swordswoman Yu Mi-Ra, who both have entered for their own personal reasons. Mo-Ri knows that no opponent will be the same and that the matches will be the most ruthless he has ever fought in his life. But instead of being worried, this prospect excites him beyond belief.
 
 A secret lies beneath the facade of a transparent test of combat prowess the tournament claims to be—one that has Korean political candidate Park Mu-Jin watching every fight with expectant, hungry eyes. Mo-Ri, Dae-Wi, and Mi-Ra are about to discover what it really means to become the God of High School.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 23 min</span>
-            <span class="d-block w-100">Genres: Action, Fantasy</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 23 min per ep</span>
+                <span class="d-block w-100">Genres: Action, Fantasy</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 action adventure mystery">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/1418/107954.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Great Pretender</span>
-            <span id="synopsis" style="display:none;">A series of unfortunate events has led Makoto "Edamame" Edamura to adopt the life of crime—pickpocketing and scamming others for a living. However, after swindling a seemingly clueless tourist, Makoto discovers that he was the one tricked and, to make matters worse, that the police are now after him. 
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/1418/107954.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Great Pretender</span>
+                <span id="synopsis" style="display:none;">A series of unfortunate events has led Makoto "Edamame" Edamura to adopt the life of crime—pickpocketing and scamming others for a living. However, after swindling a seemingly clueless tourist, Makoto discovers that he was the one tricked and, to make matters worse, that the police are now after him. 
 
 While making his escape, he runs into the tourist once again, who turns out to be a fellow con man named Laurent Thierry, and ends up following him to Los Angeles. In an attempt to defend his self-proclaimed title of "Japan's Greatest Swindler," Makoto challenges his rival to determine the better scammer. Accepting the competition, Laurent drops them off outside a huge mansion and claims that their target will be the biggest mafia boss on the West Coast.
 
 Jumping from city to city, Great Pretender follows the endeavors of Makoto alongside the cunning Laurent and his colorful associates in the world of international high-stakes fraud. Soon, Makoto realizes that he got more than what he bargained for as his self-declared skills are continually put to the test.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 23 min</span>
-            <span class="d-block w-100">Genres: Action, Adventure, Mystery</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 23 min per ep</span>
+                <span class="d-block w-100">Genres: Action, Adventure, Mystery</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 comedy">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/13/11460.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Great Teacher Onizuka</span>
-            <span id="synopsis" style="display:none;">Twenty-two-year-old Eikichi Onizuka—ex-biker gang leader, conqueror of Shonan, and virgin—has a dream: to become the greatest high school teacher in all of Japan. This isn't because of a passion for teaching, but because he wants a loving teenage wife when he's old and gray. Still, for a perverted, greedy, and lazy delinquent, there is more to Onizuka than meets the eye. So when he lands a job as the homeroom teacher of the Class 3-4 at the prestigious Holy Forest Academy—despite suplexing the Vice Principal—all of his talents are put to the test, as this class is particularly infamous.
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/13/11460.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Great Teacher Onizuka</span>
+                <span id="synopsis" style="display:none;">Twenty-two-year-old Eikichi Onizuka—ex-biker gang leader, conqueror of Shonan, and virgin—has a dream: to become the greatest high school teacher in all of Japan. This isn't because of a passion for teaching, but because he wants a loving teenage wife when he's old and gray. Still, for a perverted, greedy, and lazy delinquent, there is more to Onizuka than meets the eye. So when he lands a job as the homeroom teacher of the Class 3-4 at the prestigious Holy Forest Academy—despite suplexing the Vice Principal—all of his talents are put to the test, as this class is particularly infamous.
 
 Due to their utter contempt for all teachers, the class' students use psychological warfare to mentally break any new homeroom teacher they get, forcing them to quit and leave school. However, Onizuka isn't your average teacher, and he's ready for any challenge in his way.
 
 Bullying, suicide, and sexual harassment are just a few of the issues his students face daily. By tackling the roots of their problems, Onizuka supports them with his unpredictable and unconventional methods—even if it means jumping off a building to save a suicidal child. Thanks to his eccentric charm and fun-loving nature, Class 3-4 slowly learns just how enjoyable school can be when you're the pupils of the Great Teacher Onizuka.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 25 min</span>
-            <span class="d-block w-100">Genres: Comedy</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 25 min per ep</span>
+                <span class="d-block w-100">Genres: Comedy</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 action adventure fantasy">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/1293/115173.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Heion Sedai no Idaten-tachi</span>
-            <span id="synopsis" style="display:none;">Eight hundred years ago, terrifying demons threatened mankind's existence. On the brink of extinction, humans prayed to their gods, calling out for someone to save them. Emerging from these desperate pleas for salvation, battle deities known as the "Idaten" were born. Possessing unnatural strength and endurance, the Idaten managed to defeat the demons and an era of unprecedented peace was finally ushered in.
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/1293/115173.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Heion Sedai no Idaten-tachi</span>
+                <span id="synopsis" style="display:none;">Eight hundred years ago, terrifying demons threatened mankind's existence. On the brink of extinction, humans prayed to their gods, calling out for someone to save them. Emerging from these desperate pleas for salvation, battle deities known as the "Idaten" were born. Possessing unnatural strength and endurance, the Idaten managed to defeat the demons and an era of unprecedented peace was finally ushered in.
 
 Having never encountered demons before, the present generation of Idaten knows nothing of the demon's brutality, but they have instead only lived a  peaceful existence. Training under Rin, the only remaining Idaten from 800 years ago, the new Idaten find ways to survive in a time where they have seemingly outlived their usefulness. However, when the tyrannical Zoble Empire resurrects a demon, the misfit crop of gods are called to the battlefield against their natural enemy once more.  
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 22 min</span>
-            <span class="d-block w-100">Genres: Action, Adventure, Fantasy</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 22 min per ep</span>
+                <span class="d-block w-100">Genres: Action, Adventure, Fantasy</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 action adventure fantasy">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/1337/99013.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Hunter x Hunter (2011)</span>
-            <span id="synopsis" style="display:none;">Hunters devote themselves to accomplishing hazardous tasks, all from traversing the world's uncharted territories to locating rare items and monsters. Before becoming a Hunter, one must pass the Hunter Examination—a high-risk selection process in which most applicants end up handicapped or worse, deceased.
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/1337/99013.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Hunter x Hunter (2011)</span>
+                <span id="synopsis" style="display:none;">Hunters devote themselves to accomplishing hazardous tasks, all from traversing the world's uncharted territories to locating rare items and monsters. Before becoming a Hunter, one must pass the Hunter Examination—a high-risk selection process in which most applicants end up handicapped or worse, deceased.
 
 Ambitious participants who challenge the notorious exam carry their own reason. What drives 12-year-old Gon Freecss is finding Ging, his father and a Hunter himself. Believing that he will meet his father by becoming a Hunter, Gon takes the first step to walk the same path.
 
 During the Hunter Examination, Gon befriends the medical student Leorio Paladiknight, the vindictive Kurapika, and ex-assassin Killua Zoldyck. While their motives vastly differ from each other, they band together for a common goal and begin to venture into a perilous world.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 23 min</span>
-            <span class="d-block w-100">Genres: Action, Adventure, Fantasy</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 23 min per ep</span>
+                <span class="d-block w-100">Genres: Action, Adventure, Fantasy</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 comedy ecchi">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/1484/93140.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Back Street Girls: Gokudolls</span>
-            <span id="synopsis" style="display:none;">After failing their boss for the last time, yakuza members Kentarou, Ryou, and Kazuhiko are faced with one of two choices: have their organs harvested and sold or take a trip to Thailand for sex reassignment surgery and become pop idols. Now, after a year of excruciating training, the three thugs have been reborn as Airi, Chika, and Mari. Debuting as the amateur idol group The Goku Dolls, the three strive towards becoming top idols.
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/1484/93140.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Back Street Girls: Gokudolls</span>
+                <span id="synopsis" style="display:none;">After failing their boss for the last time, yakuza members Kentarou, Ryou, and Kazuhiko are faced with one of two choices: have their organs harvested and sold or take a trip to Thailand for sex reassignment surgery and become pop idols. Now, after a year of excruciating training, the three thugs have been reborn as Airi, Chika, and Mari. Debuting as the amateur idol group The Goku Dolls, the three strive towards becoming top idols.
 
 However, despite the hours of feminizing brainwashing they were forced to endure, the three idols have managed to keep the yakuza spirit alive in their hearts. In order to fix this, their yakuza boss hires Mandarin Kinoshita, a legendary manager who has never had an idol group fail under his management. With their lives now on the line, the reluctant yakuza must work with their new manager to unleash their inner cuteness and become the successful idols that their tyrannical boss can truly be proud of. 
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 24 min</span>
-            <span class="d-block w-100">Genres: Comedy, Ecchi</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 24 min per ep</span>
+                <span class="d-block w-100">Genres: Comedy, Ecchi</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 action adventure supernatural">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/3/40409.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">JoJo no Kimyou na Bouken (TV)</span>
-            <span id="synopsis" style="display:none;">The year is 1868; English nobleman George Joestar and his son Jonathan become indebted to Dario Brando after being rescued from a carriage incident. What the Joestars don't realize, however, is that Dario had no intention of helping them; he believed they were dead and was trying to ransack their belongings. After Dario's death 12 years later, George—hoping to repay his debt—adopts his son, Dio. 
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/3/40409.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">JoJo no Kimyou na Bouken (TV)</span>
+                <span id="synopsis" style="display:none;">The year is 1868; English nobleman George Joestar and his son Jonathan become indebted to Dario Brando after being rescued from a carriage incident. What the Joestars don't realize, however, is that Dario had no intention of helping them; he believed they were dead and was trying to ransack their belongings. After Dario's death 12 years later, George—hoping to repay his debt—adopts his son, Dio. 
 
 While he publicly fawns over his new father, Dio secretly plans to steal the Joestar fortune. His first step is to create a divide between George and Jonathan. By constantly outdoing his foster brother, Dio firmly makes his place in the Joestar family. But when Dio pushes Jonathan too far, Jonathan defeats him in a brawl. 
 
 Years later, the two appear to be close friends to the outside world. But trouble brews again when George falls ill, as Jonathan suspects that Dio is somehow behind the incident—and it appears he has more tricks up his sleeve.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 24 min</span>
-            <span class="d-block w-100">Genres: Action, Adventure, Supernatural</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 24 min per ep</span>
+                <span class="d-block w-100">Genres: Action, Adventure, Supernatural</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 action comedy ecchi">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/1464/111943.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Kill la Kill</span>
-            <span id="synopsis" style="display:none;">After the murder of her father, Ryuuko Matoi has been wandering the land in search of his killer. Following her only lead—the missing half of his invention, the Scissor Blade—she arrives at the prestigious Honnouji Academy, a high school unlike any other. The academy is ruled by the imposing and cold-hearted student council president Satsuki Kiryuuin alongside her powerful underlings, the Elite Four. In the school's brutally competitive hierarchy, Satsuki bestows upon those at the top special clothes called "Goku Uniforms," which grant the wearer unique superhuman abilities. 
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/1464/111943.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Kill la Kill</span>
+                <span id="synopsis" style="display:none;">After the murder of her father, Ryuuko Matoi has been wandering the land in search of his killer. Following her only lead—the missing half of his invention, the Scissor Blade—she arrives at the prestigious Honnouji Academy, a high school unlike any other. The academy is ruled by the imposing and cold-hearted student council president Satsuki Kiryuuin alongside her powerful underlings, the Elite Four. In the school's brutally competitive hierarchy, Satsuki bestows upon those at the top special clothes called "Goku Uniforms," which grant the wearer unique superhuman abilities. 
 
 Thoroughly beaten in a fight against one of the students in uniform, Ryuuko retreats to her razed home where she stumbles across Senketsu, a rare and sentient "Kamui," or God Clothes. After coming into contact with Ryuuko's blood, Senketsu awakens, latching onto her and providing her with immense power. Now, armed with Senketsu and the Scissor Blade, Ryuuko makes a stand against the Elite Four, hoping to reach Satsuki and uncover the culprit behind her father's murder once and for all. 
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 24 min</span>
-            <span class="d-block w-100">Genres: Action, Comedy, Ecchi</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 24 min per ep</span>
+                <span class="d-block w-100">Genres: Action, Comedy, Ecchi</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 action">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/10/78745.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Boku no Hero Academia</span>
-            <span id="synopsis" style="display:none;">The appearance of "quirks," newly discovered super powers, has been steadily increasing over the years, with 80 percent of humanity possessing various abilities from manipulation of elements to shapeshifting. This leaves the remainder of the world completely powerless, and Izuku Midoriya is one such individual.
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/10/78745.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Boku no Hero Academia</span>
+                <span id="synopsis" style="display:none;">The appearance of "quirks," newly discovered super powers, has been steadily increasing over the years, with 80 percent of humanity possessing various abilities from manipulation of elements to shapeshifting. This leaves the remainder of the world completely powerless, and Izuku Midoriya is one such individual.
 
 Since he was a child, the ambitious middle schooler has wanted nothing more than to be a hero. Izuku's unfair fate leaves him admiring heroes and taking notes on them whenever he can. But it seems that his persistence has borne some fruit: Izuku meets the number one hero and his personal idol, All Might. All Might's quirk is a unique ability that can be inherited, and he has chosen Izuku to be his successor!
 
 Enduring many months of grueling training, Izuku enrolls in UA High, a prestigious high school famous for its excellent hero training program, and this year's freshmen look especially promising. With his bizarre but talented classmates and the looming threat of a villainous organization, Izuku will soon learn what it really means to be a hero.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 24 min</span>
-            <span class="d-block w-100">Genres: Action</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 24 min per ep</span>
+                <span class="d-block w-100">Genres: Action</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
-    <div class="col-lg-4 col-md-6 action supernatural">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/10/22971.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Mirai Nikki</span>
-            <span id="synopsis" style="display:none;">A short OVA that was bundled with the limited edition of the eleventh volume of the manga.</span>
-            <span class="d-block w-100">Durée: 8 min</span>
-            <span class="d-block w-100">Genres: Action, Supernatural</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
+    <div class="col-lg-4 col-md-6 action supernatural suspense">
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/13/33465.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Mirai Nikki (TV)</span>
+                <span id="synopsis" style="display:none;">Yukiteru Amano is a shy middle schooler who regularly keeps track of what he does in his daily life by writing down all of his activities on his phone—a digital diary. Despite having no friends at school, Yukiteru is frequently seen talking to his supposedly imaginary friends Deus Ex Machina, the god of time and space; and Deus' servant, Mur Mur.
 
-            
+One day, Yukiteru wakes up and discovers that certain events of his day are preemptively displayed on his cellphone. While initially dismissing it as a coincidence, he slowly realizes that the incidents written in his phone actually take place in the near future. After spending the day benefiting from this new asset, Yukiteru learns that his classmate Yuno Gasai possesses a similar diary.
+
+As the two team up to defeat an odd pursuer and head back to their respective homes, Deus Ex Machina explains that they—alongside 10 other contestants—have been drawn into a survival game whose victor will become the deity's successor. With no other options, Yukiteru and Yuno must use their cellphones—now called "Future Diaries"—to survive this unforgiving battle royale.
+
+[Written by MAL Rewrite]</span>
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 23 min per ep</span>
+                <span class="d-block w-100">Genres: Action, Supernatural, Suspense</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 action comedy supernatural">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/8/80356.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Mob Psycho 100</span>
-            <span id="synopsis" style="display:none;">Eighth-grader Shigeo "Mob" Kageyama has tapped into his inner wellspring of psychic prowess at a young age. But the power quickly proves to be a liability when he realizes the potential danger in his skills. Choosing to suppress his power, Mob's only present use for his ability is to impress his longtime crush, Tsubomi, who soon grows bored of the same tricks.
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/8/80356.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Mob Psycho 100</span>
+                <span id="synopsis" style="display:none;">Eighth-grader Shigeo "Mob" Kageyama has tapped into his inner wellspring of psychic prowess at a young age. But the power quickly proves to be a liability when he realizes the potential danger in his skills. Choosing to suppress his power, Mob's only present use for his ability is to impress his longtime crush, Tsubomi, who soon grows bored of the same tricks.
 
 In order to effectuate control on his skills, Mob enlists himself under the wing of Arataka Reigen, a con artist claiming to be a psychic, who exploits Mob's powers for pocket change. Now, exorcising evil spirits on command has become a part of Mob's daily, monotonous life. However, the psychic energy he exerts is barely the tip of the iceberg; if his vast potential and unrestrained emotions run berserk, a cataclysmic event that would render him completely unrecognizable will be triggered. The progression toward Mob's explosion is rising and attempting to stop it is futile.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 24 min</span>
-            <span class="d-block w-100">Genres: Action, Comedy, Supernatural</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 24 min per ep</span>
+                <span class="d-block w-100">Genres: Action, Comedy, Supernatural</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 drama fantasy ecchi">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/1530/117776.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Mushoku Tensei: Isekai Ittara Honki Dasu</span>
-            <span id="synopsis" style="display:none;">Despite being bullied, scorned, and oppressed all of his life, a 34-year-old shut-in still found the resolve to attempt something heroic—only for it to end in a tragic accident. But in a twist of fate, he awakens in another world as Rudeus Greyrat, starting life again as a baby born to two loving parents.
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/1530/117776.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Mushoku Tensei: Isekai Ittara Honki Dasu</span>
+                <span id="synopsis" style="display:none;">Despite being bullied, scorned, and oppressed all of his life, a 34-year-old shut-in still found the resolve to attempt something heroic—only for it to end in a tragic accident. But in a twist of fate, he awakens in another world as Rudeus Greyrat, starting life again as a baby born to two loving parents.
 
 Preserving his memories and knowledge from his previous life, Rudeus quickly adapts to his new environment. With the mind of a grown adult, he starts to display magical talent that exceeds all expectations, honing his skill with the help of a mage named Roxy Migurdia. Rudeus learns swordplay from his father, Paul, and meets Sylphiette, a girl his age who quickly becomes his closest friend.
 
 As Rudeus' second chance at life begins, he tries to make the most of his new opportunity while conquering his traumatic past. And perhaps, one day, he may find the one thing he could not find in his old world—love.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 23 min</span>
-            <span class="d-block w-100">Genres: Drama, Fantasy, Ecchi</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 23 min per ep</span>
+                <span class="d-block w-100">Genres: Drama, Fantasy, Ecchi</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 fantasy mystery sci-fi suspense">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/1830/118780.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Yakusoku no Neverland</span>
-            <span id="synopsis" style="display:none;">Surrounded by a forest and a gated entrance, the Grace Field House is inhabited by orphans happily living together as one big family, looked after by their "Mama," Isabella. Although they are required to take tests daily, the children are free to spend their time as they see fit, usually playing outside, as long as they do not venture too far from the orphanage—a rule they are expected to follow no matter what. However, all good times must come to an end, as every few months, a child is adopted and sent to live with their new family, never to be heard from again.
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/1830/118780.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Yakusoku no Neverland</span>
+                <span id="synopsis" style="display:none;">Surrounded by a forest and a gated entrance, the Grace Field House is inhabited by orphans happily living together as one big family, looked after by their "Mama," Isabella. Although they are required to take tests daily, the children are free to spend their time as they see fit, usually playing outside, as long as they do not venture too far from the orphanage—a rule they are expected to follow no matter what. However, all good times must come to an end, as every few months, a child is adopted and sent to live with their new family, never to be heard from again.
 
 However, the three oldest siblings have their suspicions about what is actually happening at the orphanage, and they are about to discover the cruel fate that awaits the children living at Grace Field, including the twisted nature of their beloved Mama.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 22 min</span>
-            <span class="d-block w-100">Genres: Fantasy, Mystery, Sci-Fi, Suspense</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 22 min per ep</span>
+                <span class="d-block w-100">Genres: Fantasy, Mystery, Sci-Fi, Suspense</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 action fantasy">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/1886/128266.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Noragami</span>
-            <span id="synopsis" style="display:none;">In times of need, if you look in the right place, you just may see a strange telephone number scrawled in red. If you call this number, you will hear a young man introduce himself as the Yato God.
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/1886/128266.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Noragami</span>
+                <span id="synopsis" style="display:none;">In times of need, if you look in the right place, you just may see a strange telephone number scrawled in red. If you call this number, you will hear a young man introduce himself as the Yato God.
 
 Yato is a minor deity and a self-proclaimed "Delivery God," who dreams of having millions of worshippers. Without a single shrine dedicated to his name, however, his goals are far from being realized. He spends his days doing odd jobs for five yen apiece, until his weapon partner becomes fed up with her useless master and deserts him.
 
 Just as things seem to be looking grim for the god, his fortune changes when a middle school girl, Hiyori Iki, supposedly saves Yato from a car accident, taking the hit for him. Remarkably, she survives, but the event has caused her soul to become loose and hence able to leave her body. Hiyori demands that Yato return her to normal, but upon learning that he needs a new partner to do so, reluctantly agrees to help him find one. And with Hiyori's help, Yato's luck may finally be turning around.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 24 min</span>
-            <span class="d-block w-100">Genres: Action, Fantasy</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 24 min per ep</span>
+                <span class="d-block w-100">Genres: Action, Fantasy</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 action adventure fantasy">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/7/88019.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Overlord</span>
-            <span id="synopsis" style="display:none;">The final hour of the popular virtual reality game Yggdrasil has come. However, Momonga, a powerful wizard and master of the dark guild Ainz Ooal Gown, decides to spend his last few moments in the game as the servers begin to shut down. To his surprise, despite the clock having struck midnight, Momonga is still fully conscious as his character and, moreover, the non-player characters appear to have developed personalities of their own!
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/7/88019.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Overlord</span>
+                <span id="synopsis" style="display:none;">The final hour of the popular virtual reality game Yggdrasil has come. However, Momonga, a powerful wizard and master of the dark guild Ainz Ooal Gown, decides to spend his last few moments in the game as the servers begin to shut down. To his surprise, despite the clock having struck midnight, Momonga is still fully conscious as his character and, moreover, the non-player characters appear to have developed personalities of their own!
 
 Confronted with this abnormal situation, Momonga commands his loyal servants to help him investigate and take control of this new world, with the hopes of figuring out what has caused this development and if there may be others in the same predicament.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 24 min</span>
-            <span class="d-block w-100">Genres: Action, Adventure, Fantasy</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 24 min per ep</span>
+                <span class="d-block w-100">Genres: Action, Adventure, Fantasy</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 action horror sci-fi">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/3/73178.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Kiseijuu: Sei no Kakuritsu</span>
-            <span id="synopsis" style="display:none;">All of a sudden, they arrived: parasitic aliens that descended upon Earth and quickly infiltrated humanity by burrowing into the brains of vulnerable targets. These insatiable beings acquire full control of their host and are able to morph into a variety of forms in order to feed on unsuspecting prey.
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/3/73178.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Kiseijuu: Sei no Kakuritsu</span>
+                <span id="synopsis" style="display:none;">All of a sudden, they arrived: parasitic aliens that descended upon Earth and quickly infiltrated humanity by burrowing into the brains of vulnerable targets. These insatiable beings acquire full control of their host and are able to morph into a variety of forms in order to feed on unsuspecting prey.
  
 Sixteen-year-old high school student Shinichi Izumi falls victim to one of these parasites, but it fails to take over his brain, ending up in his right hand instead. Unable to relocate, the parasite, now named Migi, has no choice but to rely on Shinichi in order to stay alive. Thus, the pair is forced into an uneasy coexistence and must defend themselves from hostile parasites that hope to eradicate this new threat to their species.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 23 min</span>
-            <span class="d-block w-100">Genres: Action, Horror, Sci-Fi</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 23 min per ep</span>
+                <span class="d-block w-100">Genres: Action, Horror, Sci-Fi</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 comedy romance ecchi">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/1286/112161.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Prison School</span>
-            <span id="synopsis" style="display:none;">Located on the outskirts of Tokyo, Hachimitsu Private Academy is a prestigious all-girls boarding school, famous for its high-quality education and disciplined students. However, this is all about to change due to the revision of the school's most iconic policy, as boys are now able to enroll as well.
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/1286/112161.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Prison School</span>
+                <span id="synopsis" style="display:none;">Located on the outskirts of Tokyo, Hachimitsu Private Academy is a prestigious all-girls boarding school, famous for its high-quality education and disciplined students. However, this is all about to change due to the revision of the school's most iconic policy, as boys are now able to enroll as well.
  
 At the start of the first semester under this new decree, a mere five boys have been accepted, effectively splitting the student body into a ratio of two hundred girls to one boy. Kiyoshi, Gakuto, Shingo, Andre, and Jo are quickly cast away without having a chance to make any kind of a first impression. Unable to communicate with their fellow female students, the eager boys set their sights on a far more dangerous task: peeping into the girls' bath!
  
 It's only after their plan is thoroughly decimated by the infamous Underground Student Council that the motley crew find their freedom abruptly taken from them, as they are thrown into the school's prison with the sentence of an entire month as punishment. Thus begins the tale of the boys' harsh lives in Prison School, a righteous struggle that will ultimately test the bonds of friendship and perverted brotherhood.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 24 min</span>
-            <span class="d-block w-100">Genres: Comedy, Romance, Ecchi</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 24 min per ep</span>
+                <span class="d-block w-100">Genres: Comedy, Romance, Ecchi</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 action sci-fi suspense">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/5/43399.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Psycho-Pass</span>
-            <span id="synopsis" style="display:none;">Justice, and the enforcement of it, has changed. In the 22nd century, Japan enforces the Sibyl System, an objective means of determining the threat level of each citizen by examining their mental state for signs of criminal intent, known as their Psycho-Pass. Inspectors uphold the law by subjugating, often with lethal force, anyone harboring the slightest ill-will; alongside them are Enforcers, jaded Inspectors that have become latent criminals, granted relative freedom in exchange for carrying out the Inspectors' dirty work.
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/5/43399.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Psycho-Pass</span>
+                <span id="synopsis" style="display:none;">Justice, and the enforcement of it, has changed. In the 22nd century, Japan enforces the Sibyl System, an objective means of determining the threat level of each citizen by examining their mental state for signs of criminal intent, known as their Psycho-Pass. Inspectors uphold the law by subjugating, often with lethal force, anyone harboring the slightest ill-will; alongside them are Enforcers, jaded Inspectors that have become latent criminals, granted relative freedom in exchange for carrying out the Inspectors' dirty work.
 
 Into this world steps Akane Tsunemori, a young woman with an honest desire to uphold justice. However, as she works alongside veteran Enforcer Shinya Kougami, she soon learns that the Sibyl System's judgments are not as perfect as her fellow Inspectors assume. With everything she has known turned on its head, Akane wrestles with the question of what justice truly is, and whether it can be upheld through the use of a system that may already be corrupt.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 23 min</span>
-            <span class="d-block w-100">Genres: Action, Sci-Fi, Suspense</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 23 min per ep</span>
+                <span class="d-block w-100">Genres: Action, Sci-Fi, Suspense</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 adventure fantasy">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/1347/117616.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Ousama Ranking</span>
-            <span id="synopsis" style="display:none;">The people of the kingdom look down on the young Prince Bojji, who can neither hear nor speak. They call him "The Useless Prince" while jeering at his supposed foolishness.
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/1347/117616.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Ousama Ranking</span>
+                <span id="synopsis" style="display:none;">The people of the kingdom look down on the young Prince Bojji, who can neither hear nor speak. They call him "The Useless Prince" while jeering at his supposed foolishness.
 
 However, while Bojji may not be physically strong, he is certainly not weak of heart. When a chance encounter with a shadow creature should have left him traumatized, it instead makes him believe that he has found a friend amidst those who only choose to notice his shortcomings. He starts meeting with Kage, the shadow, regularly, to the point where even the otherwise abrasive creature begins to warm up to him.
 
 Kage and Bojji's unlikely friendship lays the budding foundations of the prince's journey, one where he intends to conquer his fears and insecurities. Despite the constant ridicule he faces, Bojji resolves to fulfill his desire of becoming the best king he can be.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 22 min</span>
-            <span class="d-block w-100">Genres: Adventure, Fantasy</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 22 min per ep</span>
+                <span class="d-block w-100">Genres: Adventure, Fantasy</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 adventure drama fantasy erotica">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/1301/110018.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Kaifuku Jutsushi no Yarinaoshi</span>
-            <span id="synopsis" style="display:none;">When Keyaru acquired his powers as a Hero who specialized in healing all injuries regardless of severity, it seemed that he would walk the path to a great future. But what awaited him instead was great agony; he was subjected to years of seemingly endless hellish torture and abuse. Keyaru's healing skills allowed him to secretly collect the memories and abilities of those he treated, gradually making him stronger than anyone else. But by the time he reached his full potential, it was far too late—he had already lost everything.
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/1301/110018.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Kaifuku Jutsushi no Yarinaoshi</span>
+                <span id="synopsis" style="display:none;">When Keyaru acquired his powers as a Hero who specialized in healing all injuries regardless of severity, it seemed that he would walk the path to a great future. But what awaited him instead was great agony; he was subjected to years of seemingly endless hellish torture and abuse. Keyaru's healing skills allowed him to secretly collect the memories and abilities of those he treated, gradually making him stronger than anyone else. But by the time he reached his full potential, it was far too late—he had already lost everything.
 
 Determined to put his life back on track, Keyaru decided to unleash a powerful healing spell that rewound the entire world back to the time before he began to suffer his horrible fate. Equipped with the anguish of his past, he vows to redo everything in order to fulfill a new purpose—to exact revenge upon those who have wronged him.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 24 min</span>
-            <span class="d-block w-100">Genres: Adventure, Drama, Fantasy, Erotica</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 24 min per ep</span>
+                <span class="d-block w-100">Genres: Adventure, Drama, Fantasy, Erotica</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 comedy supernatural">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/11/80167.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Saiki Kusuo no Ψ-nan</span>
-            <span id="synopsis" style="display:none;">To the average person, psychic abilities might seem a blessing; for Kusuo Saiki, however, this could not be further from the truth. Gifted with a wide assortment of supernatural abilities ranging from telepathy to x-ray vision, he finds this so-called blessing to be nothing but a curse. As all the inconveniences his powers cause constantly pile up, all Kusuo aims for is an ordinary, hassle-free life—a life where ignorance is bliss.
-
-Unfortunately, the life of a psychic is far from quiet. Though Kusuo tries to stay out of the spotlight by keeping his powers a secret from his classmates, he ends up inadvertently attracting the attention of many odd characters, such as the empty-headed Riki Nendou and the delusional Shun Kaidou. Forced to deal with the craziness of the people around him, Kusuo comes to learn that the ordinary life he has been striving for is a lot more difficult to achieve than expected.
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/1961/91383.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Saiki Kusuo no Ψ-nan 2</span>
+                <span id="synopsis" style="display:none;">The disastrous life of the gifted psychic Kusuo Saiki continues, despite his utmost effort to live an ordinary life. Although he has certainly grown accustomed to dealing with his troublesome friends—who are his biggest hurdle to achieving a peaceful life—he still has a long way to go. Also joining the usual oddballs are a few new faces whose shenanigans add to Saiki's misery, making his dreams of a hassle-free life a distant fantasy.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 5 min</span>
-            <span class="d-block w-100">Genres: Comedy, Supernatural</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 24 min per ep</span>
+                <span class="d-block w-100">Genres: Comedy, Supernatural</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 action adventure comedy">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/1375/121599.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Samurai Champloo</span>
-            <span id="synopsis" style="display:none;">Fuu Kasumi is a young and clumsy waitress who spends her days peacefully working in a small teahouse. That is, until she accidentally spills a drink all over one of her customers! With a group of samurai now incessantly harassing her, Fuu desperately calls upon another samurai in the shop, Mugen, who quickly defeats them with his wild fighting technique, utilizing movements reminiscent to that of breakdancing. Unfortunately, Mugen decides to pick a fight with the unwilling ronin Jin, who wields a more precise and traditional style of swordfighting, and the latter proves to be a formidable opponent. The only problem is, they end up destroying the entire shop as well as accidentally killing the local magistrate's son.
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/1375/121599.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Samurai Champloo</span>
+                <span id="synopsis" style="display:none;">Fuu Kasumi is a young and clumsy waitress who spends her days peacefully working in a small teahouse. That is, until she accidentally spills a drink all over one of her customers! With a group of samurai now incessantly harassing her, Fuu desperately calls upon another samurai in the shop, Mugen, who quickly defeats them with his wild fighting technique, utilizing movements reminiscent to that of breakdancing. Unfortunately, Mugen decides to pick a fight with the unwilling ronin Jin, who wields a more precise and traditional style of swordfighting, and the latter proves to be a formidable opponent. The only problem is, they end up destroying the entire shop as well as accidentally killing the local magistrate's son.
 
 For their crime, the two samurai are captured and set to be executed. However, they are rescued by Fuu, who hires the duo as her bodyguards. Though she no longer has a place to return to, the former waitress wishes to find a certain samurai who smells of sunflowers and enlists the help of the now exonerated pair to do so. Despite initially disapproving of this idea, the two eventually agree to assist the girl in her quest; thus, the trio embark upon an adventure to find this mysterious warrior—that is, if Fuu can keep Mugen and Jin from killing each other.
 
 Set in an alternate Edo Period of Japan, Samurai Champloo follows the journey of these three eccentric individuals in an epic quest full of action, comedy, and dynamic sword fighting, all set to the beat of a unique hip-hop infused soundtrack.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 24 min</span>
-            <span class="d-block w-100">Genres: Action, Adventure, Comedy</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 24 min per ep</span>
+                <span class="d-block w-100">Genres: Action, Adventure, Comedy</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 action horror mystery">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/1547/117947.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Tenkuu Shinpan</span>
-            <span id="synopsis" style="display:none;">Upon witnessing a man's head cracked open with an axe, 16-year-old Yuri Honjou trembles in fear and confusion as she flees from the masked assailant, only to find out she's trapped in an abandoned building where every door is mysteriously locked. Desperately searching for a way out, Yuri runs to the rooftop, but a world with no signs of life stands before her, surrounded by high-rise buildings. Though filled with despair, once she learns that her brother is also in this strange place, Yuri is determined to find him and escape.
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/1547/117947.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Tenkuu Shinpan</span>
+                <span id="synopsis" style="display:none;">Upon witnessing a man's head cracked open with an axe, 16-year-old Yuri Honjou trembles in fear and confusion as she flees from the masked assailant, only to find out she's trapped in an abandoned building where every door is mysteriously locked. Desperately searching for a way out, Yuri runs to the rooftop, but a world with no signs of life stands before her, surrounded by high-rise buildings. Though filled with despair, once she learns that her brother is also in this strange place, Yuri is determined to find him and escape.
 
 However, she soon finds that there are more masked murderers in the area, anxious to terrorize their newfound victims and satiate their sickest desires, leaving Yuri to question if they will be able to make it out alive.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 25 min</span>
-            <span class="d-block w-100">Genres: Action, Horror, Mystery</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 25 min per ep</span>
+                <span class="d-block w-100">Genres: Action, Horror, Mystery</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
-    <div class="col-lg-4 col-md-6 action award-winning drama suspense">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/10/47347.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Shingeki no Kyojin</span>
-            <span id="synopsis" style="display:none;">Centuries ago, mankind was slaughtered to near extinction by monstrous humanoid creatures called Titans, forcing humans to hide in fear behind enormous concentric walls. What makes these giants truly terrifying is that their taste for human flesh is not born out of hunger but what appears to be out of pleasure. To ensure their survival, the remnants of humanity began living within defensive barriers, resulting in one hundred years without a single titan encounter. However, that fragile calm is soon shattered when a colossal Titan manages to breach the supposedly impregnable outer wall, reigniting the fight for survival against the man-eating abominations.
+    <div class="col-lg-4 col-md-6 action award winning drama suspense">
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/10/47347.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Shingeki no Kyojin</span>
+                <span id="synopsis" style="display:none;">Centuries ago, mankind was slaughtered to near extinction by monstrous humanoid creatures called Titans, forcing humans to hide in fear behind enormous concentric walls. What makes these giants truly terrifying is that their taste for human flesh is not born out of hunger but what appears to be out of pleasure. To ensure their survival, the remnants of humanity began living within defensive barriers, resulting in one hundred years without a single titan encounter. However, that fragile calm is soon shattered when a colossal Titan manages to breach the supposedly impregnable outer wall, reigniting the fight for survival against the man-eating abominations.
 
 After witnessing a horrific personal loss at the hands of the invading creatures, Eren Yeager dedicates his life to their eradication by enlisting into the Survey Corps, an elite military unit that combats the merciless humanoids outside the protection of the walls. Eren, his adopted sister Mikasa Ackerman, and his childhood friend Armin Arlert join the brutal war against the Titans and race to discover a way of defeating them before the last walls are breached.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 24 min</span>
-            <span class="d-block w-100">Genres: Action, Award-Winning, Drama, Suspense</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 24 min per ep</span>
+                <span class="d-block w-100">Genres: Action, Award Winning, Drama, Suspense</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
-    <div class="col-lg-4 col-md-6 action award-winning comedy">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/1441/122795.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Spy x Family</span>
-            <span id="synopsis" style="display:none;">Corrupt politicians, frenzied nationalists, and other warmongering forces constantly jeopardize the thin veneer of peace between neighboring countries Ostania and Westalis. In spite of their plots, renowned spy and master of disguise "Twilight" fulfills dangerous missions one after another in the hope that no child will have to experience the horrors of war.
+    <div class="col-lg-4 col-md-6 action award winning comedy">
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/1441/122795.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Spy x Family</span>
+                <span id="synopsis" style="display:none;">Corrupt politicians, frenzied nationalists, and other warmongering forces constantly jeopardize the thin veneer of peace between neighboring countries Ostania and Westalis. In spite of their plots, renowned spy and master of disguise "Twilight" fulfills dangerous missions one after another in the hope that no child will have to experience the horrors of war.
 
 In the bustling Ostanian city of Berlint, Twilight dons the alias of "Loid Forger," an esteemed psychiatrist. However, his true intention is to gather intelligence on prominent politician Donovan Desmond, who only appears rarely in public at his sons' school: the prestigious Eden Academy. Enlisting the help of unmarried city hall clerk Yor Briar to act as his wife and adopting the curious six-year-old orphan Anya as his daughter, Loid enacts his master plan. He will enroll Anya in Eden Academy, where Loid hopes she will excel and give him the opportunity to meet Donovan without arousing suspicion. 
 
 Unfortunately for Loid, even a man of his talents has trouble playing the figure of a loving father and husband. And just like Loid is hiding his true identity, Yor—who is an underground assassin known as "Thorn Princess"—and Anya—an esper who can read people's minds—have no plans to disclose their own secrets either. Although this picture-perfect family is founded on deception, the Forgers gradually come to understand that the love they share for one another trumps all else.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 24 min</span>
-            <span class="d-block w-100">Genres: Action, Award-Winning, Comedy</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 24 min per ep</span>
+                <span class="d-block w-100">Genres: Action, Award Winning, Comedy</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 action drama suspense">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/1579/118015.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Super Crooks</span>
-            <span id="synopsis" style="display:none;">One last heist. That's what they all say, right? Just one final score, and everyone can retire and take up fishing. Thing is, the jails are filled with super villains who thought the same thing, and got busted. But the Heat's in a jam. He's run up the kind of gambling debt that - if he can't pay it back in cash - will be paid in blood. Nobody wants to see the most beloved supercrook of all time rubbed out by the mob - especially his biggest fan, Johnny Bolt. And Johnny's got a plan to help the Heat and make all his buddies disgustingly rich at the same time. Unfortunately for Johnny's recruits, they have to head to Spain and rob the world's most notorious super villain blind. And that's where things get tricky. 
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/1579/118015.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Super Crooks</span>
+                <span id="synopsis" style="display:none;">One last heist. That's what they all say, right? Just one final score, and everyone can retire and take up fishing. Thing is, the jails are filled with super villains who thought the same thing, and got busted. But the Heat's in a jam. He's run up the kind of gambling debt that - if he can't pay it back in cash - will be paid in blood. Nobody wants to see the most beloved supercrook of all time rubbed out by the mob - especially his biggest fan, Johnny Bolt. And Johnny's got a plan to help the Heat and make all his buddies disgustingly rich at the same time. Unfortunately for Johnny's recruits, they have to head to Spain and rob the world's most notorious super villain blind. And that's where things get tricky. 
 
 (Source: Marvel Comics)</span>
-            <span class="d-block w-100">Durée: 25 min</span>
-            <span class="d-block w-100">Genres: Action, Drama, Suspense</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 25 min per ep</span>
+                <span class="d-block w-100">Genres: Action, Drama, Suspense</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 action drama fantasy">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/1456/115123.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Shuumatsu no Walküre</span>
-            <span id="synopsis" style="display:none;">The gods of the world—from Greek to Norse to Hindu mythology—gather every one thousand years to make one important decision: whether or not to wipe out mankind. Repulsed by humanity's selfishness, the council unanimously votes to destroy all humans. But before the decree is enacted, Brunhilde, one of the 13 Valkyries of Valhalla, interrupts the meeting to give mankind a chance at survival. 
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/1456/115123.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Shuumatsu no Walküre</span>
+                <span id="synopsis" style="display:none;">The gods of the world—from Greek to Norse to Hindu mythology—gather every one thousand years to make one important decision: whether or not to wipe out mankind. Repulsed by humanity's selfishness, the council unanimously votes to destroy all humans. But before the decree is enacted, Brunhilde, one of the 13 Valkyries of Valhalla, interrupts the meeting to give mankind a chance at survival. 
 
 Brunhilde proposes the idea of enacting Ragnarök, an event in which the strongest 13 mortal warriors fight against 13 gods in one-on-one matches. Although the trial is ridiculed by the gods, the demigod takes advantage of their pride and forces them into an agreement. However, Brunhilde herself must recruit the mightiest heroes throughout humanity's thousand-year history and guide them to victory before they meet their untimely demise.
 
 [Written by MAL Rewrite]</span>
-            <span class="d-block w-100">Durée: 24 min</span>
-            <span class="d-block w-100">Genres: Action, Drama, Fantasy</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 24 min per ep</span>
+                <span class="d-block w-100">Genres: Action, Drama, Fantasy</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
-
-
     
     <div class="col-lg-4 col-md-6 action fantasy">
-    <div class="product-item">
-        <div class="product-img float-start">
-            <img src="https://cdn.myanimelist.net/images/anime/1684/114647.jpg" class="img-fluid d-block mx-auto">
-        </div>
-        <div class="product-content text-center py-3 float-end">
-            <span class="d-block text-uppercase fw-bold" id="titre">Yasuke</span>
-            <span id="synopsis" style="display:none;">A village in danger, a mysterious child, warring daimyo, and the greatest ronin never known all clash in a Japan of magic and mechs. Learn the story of the first African samurai.
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/1684/114647.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Yasuke</span>
+                <span id="synopsis" style="display:none;">A village in danger, a mysterious child, warring daimyo, and the greatest ronin never known all clash in a Japan of magic and mechs. Learn the story of the first African samurai.
 
 (Source: Netflix)</span>
-            <span class="d-block w-100">Durée: 29 min</span>
-            <span class="d-block w-100">Genres: Action, Fantasy</span>
-            <span class="d-block w-100" id="note">&#9733 &#9733 &#9733 &#9733 &#9734</span>
-
-            
+                <span id="avis" style="display:none;"></span>
+                <span class="d-block w-100">Durée: 29 min per ep</span>
+                <span class="d-block w-100">Genres: Action, Fantasy</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            </div>
         </div>
     </div>
-</div>
+    
+    <div class="col-lg-4 col-md-6 action adventure fantasy">
+        <div class="product-item">
+            <div class="product-img float-start">
+                <img src="https://cdn.myanimelist.net/images/anime/1075/131925.jpg" class="img-fluid d-block mx-auto">
+            </div>
+            <div class="product-content text-center py-3 float-end">
+                <span class="d-block text-uppercase fw-bold" id="titre">Jigokuraku</span>
+                <span id="synopsis" style="display:none;">Sentenced to death, ninja Gabimaru the Hollow finds himself apathetic. After leading a blood-soaked life, Gabimaru believes he deserves to die. However, every attempt to execute him inexplicably fails. Finally, Sagiri Yamada Asaemon, a fledgling member of a famed executioner clan, is asked to take Gabimaru's life; yet Sagiri makes no move to kill him as requested.
 
+Insisting that Gabimaru will not die because of his love for his wife, Sagiri instead offers him the chance to obtain a full pardon for his crimes. If he can travel to the island of Shinsekyo and obtain the Elixir of Life—which supposedly grants immortality—and bring it back for the shogun, then his freedom will be assured.
 
+But of the many who have traveled to Shinsekyo in search of the mythical Elixir, not a single person has returned sound of mind, if at all. Though unaware of the numerous dangers ahead, Gabimaru decides to accept the offer—alongside ten other death row convicts—in hope that he and his wife may finally live in peace.
+
+[Written by MAL Rewrite]</span>
+                <span id="avis" style="display:none;">Le rythme du du début est bon, on rentre vite dans l'action. Les morts sont assez rapide ce qui crée de la cohérence dans l'anime. Pour ce qui est de la suite le rythme deviens assez lent et basique.</span>
+                <span class="d-block w-100">Durée: 24 min per ep</span>
+                <span class="d-block w-100">Genres: Action, Adventure, Fantasy</span>
+                <span class="d-block w-100" id="note">&#9733; &#9733; &#9733; &#9734; &#9734;</span>
+            </div>
+        </div>
     </div>
-  
+    </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- isotope plugin -->
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
-    <script src="script.js"></script>
-    
+    <script src="./javascript/script.js"></script>
 </body>
 </html>
- 

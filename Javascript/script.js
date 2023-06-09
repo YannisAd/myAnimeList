@@ -39,6 +39,7 @@ $(document).ready(function() {
   // Popup details creation
   $(".product-item").click(function() {
     var title = $(this).find("#titre").text();
+    var avis = $(this).find("#avis").text();
     var synopsis = $(this).find("#synopsis").text();
     var imgUrl = $(this).find(".product-img img").attr("src");
 
@@ -52,6 +53,10 @@ $(document).ready(function() {
       <div class="popup-content">
         <img src="${imgUrl}" class="popup-img">
         <h2>${title}</h2>
+        <h3> Mon avis : <br></h3>
+        <p>${avis}</p>
+        <h3> Synopsis : <br></h3>
+
         <p>${synopsis}</p>
 
       </div>
@@ -70,6 +75,10 @@ $(document).ready(function() {
     });
   });
 });
+
+
+
+
 
 
 /* Si utilisation d'une API ici Jikan REST
