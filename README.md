@@ -10,11 +10,11 @@ Pour **visualiser** la liste des animes, veuillez cliquer sur le fichier **index
 
 Si vous souhaitez **ajouter un nouvel anime** à la liste, suivez les étapes suivantes :
 
-- Trouvez l'**ID** de l'anime sur **[ MyAnimeList](https://myanimelist.net) **.
+- Trouvez l'**ID** de l'anime sur [ MyAnimeList](https://myanimelist.net).
 
 - Lancez le fichier **add_anime.py** en utilisant la commande suivante dans votre terminal :
 
-~python add_anime.py~
+`python add_anime.py`
 
 ## Fonctionnalités
 
@@ -78,9 +78,9 @@ To **view the anime list**, please click on the **index.html** file.
 
 If you want to **add a new anime** to the list, follow these steps:
 
-- Find the **ID** on **[ MyAnimeList](https://myanimelist.net) **.
+- Find the **ID** on [ MyAnimeList](https://myanimelist.net).
 - Run the **add_anime.py** file using the following command in your terminal:
-~python add_anime.py~
+`python add_anime.py`
 
 
 ## Features 
