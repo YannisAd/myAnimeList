@@ -1,6 +1,6 @@
 # Projet Anime List
 
-**Requirements :** googletrans min. 3.0.0
+**Requirements :** googletrans
 
 ``pip install googletrans``
 
