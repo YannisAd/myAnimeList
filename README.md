@@ -1,8 +1,8 @@
 # Projet Anime List
 
-**Requirements :** googletrans 3.0.0
+**Requirements :** googletrans min. 3.0.0
 
-``pip install googletrans==4.0.0-rc1``
+``pip install googletrans``
 
 
 AnimeList est un site contenant une liste d'anime dynamique qui vous permet de suivre les animes que vous avez visionnés. Il offre des fonctionnalités de filtrage et de recherche pour trouver et organiser facilement vos entrées d'anime. Les données de ce projet sont récupérées depuis l'API MyAnimeList.
