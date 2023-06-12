@@ -28,14 +28,13 @@ Pour lancer le site, il vous suffit d'ouvrir le fichier index.html dans votre na
 
 ## Mise à jour de la liste d'anime
 
-Si vous souhaitez modifier ou ajouter de nouvelles cartes d'anime directement depuis le fichier JSON, vous pouvez utiliser le script **Create_card.py** fourni. Ce script génère des cartes d'anime à partir des données du fichier JSON.
+Si vous souhaitez modifier ou ajouter de nouvelles cartes d'anime directement depuis le fichier JSON, vous pouvez utiliser le script **add_anime.py** fourni. Ce script génère des cartes d'anime à partir des données du fichier JSON.
 
 ## Voici comment utiliser le script :
 
-Exécutez le script **Create_card.py**.
+Exécutez le script **add_anime.py**.
 Le script lira le fichier JSON et générera les cartes d'anime.
 Les cartes générées seront automatiquement mises à jour et enregistrées dans le fichier. Vous n'avez pas besoin de supprimer le fichier avant d'exécuter le script.
-**Remarque :** Assurez-vous d'avoir les dépendances nécessaires et Python installé sur votre système avant d'exécuter le script.
 
 ## Contributions
 
@@ -98,15 +97,14 @@ To launch the website, simply open the index.html file in your preferred web bro
 
 ## Updating the Anime List
 
-If you want to modify or add new anime cards directly from the JSON file, you can use the provided **Create_card.py** script. This script generates anime cards based on the data from the JSON file.
+If you want to modify or add new anime cards directly from the JSON file, you can use the provided **add_anime.py** script. This script generates anime cards based on the data from the JSON file.
 
 Here's how to use the script:
 
-Run the **Create_card.py script**.
+Run the **add_anime.py script**.
 The script will read the JSON file and generate the anime cards.
 The generated cards will be automatically updated and saved to the file. You don't need to delete the file before running the script.
 
-**Note :** Make sure you have the necessary dependencies and Python installed on your system before running the script.
 
 ## Contributions
 
