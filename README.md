@@ -61,8 +61,7 @@ Ce projet utilise l'API MyAnimeList et l'API Jikan. Un grand merci aux développ
 
 --------------------------------------------------------------------------------------------
 
-[![Watch the video]]([https://youtu.be/vt5fpE0bzSY](https://github.com/YannisAd/myAnimeList/blob/main/images/preview.mp4))
-
+[![Watch the video]](https://github.com/YannisAd/myAnimeList/blob/main/images/preview.mp4)
 
 
 --------------------------------------------------------------------------------------------
