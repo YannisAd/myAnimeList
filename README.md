@@ -1,3 +1,10 @@
+
+
+
+https://github.com/YannisAd/myAnimeList/assets/90702501/5325f26b-fbc4-46e5-8060-722131dcc4f0
+
+
+
 # Projet Anime List
 
 **Requirements :** googletrans
