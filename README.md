@@ -10,7 +10,7 @@
 
 **Une application web pour gérer et découvrir vos animes préférés**
 
-[🚀 Démo en ligne](#) • [📖 Documentation](#fonctionnalités) • [🐛 Signaler un bug](../../issues)
+[🚀 Démo en ligne](#)  • [🐛 Signaler un bug](../../issues)
 
 </div>
 
