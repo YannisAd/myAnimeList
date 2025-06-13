@@ -1,131 +1,209 @@
+# 🎌 MyAnimeList
 
+<div align="center">
 
+![Anime List Banner](https://img.shields.io/badge/Animes-Tracker-blue?style=for-the-badge&logo=crunchyroll&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-https://github.com/YannisAd/myAnimeList/assets/90702501/5325f26b-fbc4-46e5-8060-722131dcc4f0
+**Une application web pour gérer et découvrir vos animes préférés**
 
+[🚀 Démo en ligne](#) • [📖 Documentation](#fonctionnalités) • [🐛 Signaler un bug](../../issues)
 
+</div>
 
-# Projet Anime List
+---
 
-**Requirements :** googletrans
+## ✨ Aperçu
 
-``pip install googletrans``
+Ma Liste d'Animes est une application web qui vous permet de gérer votre collection d'animes personnelle. Organisez, notez et découvrez de nouveaux animes facilement. L'application utilise l'API Jikan V4.
 
+### 🖼️ Screenshots
 
-AnimeList est un site contenant une liste d'anime dynamique qui vous permet de suivre les animes que vous avez visionnés. Il offre des fonctionnalités de filtrage et de recherche pour trouver et organiser facilement vos entrées d'anime. Les données de ce projet sont récupérées depuis l'API MyAnimeList.
+<div align="center">
+<img src="https://github.com/YannisAd/myAnimeList/blob/main/img/1.png" alt="Page principale" width="400"/>
+<img src="https://github.com/YannisAd/myAnimeList/blob/main/img/2.png" alt="Page détails" width="400"/>
+</div>
 
-**Remarque :** Il s'agit d'une version de test du projet, et à des fins de démonstration, les données ont été obtenues à l'aide de l'API gratuite Jikan et stockées dans un fichier JSON.
+---
 
-## Instructions
+## 🎯 Fonctionnalités
 
-Pour **visualiser** la liste des animes, veuillez cliquer sur le fichier **index.html**.
+### 📋 Gestion de Liste
+- ✅ **Ajout d'animes** via recherche en temps réel
+- ✅ **Système de notation** avec étoiles (1-5)
+- ✅ **Commentaires personnels** pour chaque anime
+- ✅ **Import/Export** de liste en JSON
 
-Si vous souhaitez **ajouter un nouvel anime** à la liste, suivez les étapes suivantes :
+### 🔍 Recherche & Filtres
+- 🔎 **Recherche, filtres et tri** dans votre liste
+- 🏷️ **Filtrage par genres** (Action, Romance, Fantasy, etc.)
+- ⭐ **Filtrage par note minimale**
+- 📊 **Tri multiple** (titre, note, date d'ajout)
 
-- Trouvez l'**ID** de l'anime sur [ MyAnimeList](https://myanimelist.net).
+### 📱 Interface
+- 🎨 **Design responsive** adapté à tous les écrans avec Tailwind CSS
+- 🌈 **Animations fluides** et transitions élégantes
+- 🎯 **Navigation par onglets** intuitive
+- 🔔 **Notifications toast** pour les actions
 
-- Lancez le fichier **add_anime.py** en utilisant la commande suivante dans votre terminal :
+### 🎬 Découverte d'Animes
+- 🔍 **Recherche MyAnimeList** intégrée
+- 📺 **Liste des épisodes** détaillée
+- 💡 **Recommandations personnalisées**
+- 🔗 **Navigation entre animes** recommandés
+- 📊 **Informations complètes** (synopsis, genres, durée)
 
-`python add_anime.py`
+### 🛠️ Fonctionnalités Avancées
+- 💾 **Sauvegarde locale** automatique
+- 🚀 **Chargement lazy** des données
+- 🔄 **Synchronisation** cross-onglets
 
-## Fonctionnalités
+---
 
-- Afficher et lister les entrées d'anime avec des détails pertinents tels que le titre, les épisodes, le synopsis, et plus encore.
-- Filtrer la liste d'anime en fonction de différentes catégories à l'aide des outils de filtrage fournis.
-- Rechercher des titres d'anime spécifiques à l'aide de la barre de recherche.
-- Cliquer sur une carte d'anime pour afficher des informations détaillées dans une fenêtre contextuelle.
+## 🚀 Installation
 
-**Pour commencer**
-Pour lancer le site, il vous suffit d'ouvrir le fichier index.html dans votre navigateur Web préféré. La liste d'anime sera affichée et vous pourrez commencer à explorer et interagir avec les fonctionnalités.
+### Prérequis
+- Navigateur web moderne (Chrome, Firefox, Safari, Edge)
+- Connexion internet pour l'API MyAnimeList
 
-## Mise à jour de la liste d'anime
+### Installation locale
 
-Si vous souhaitez modifier ou ajouter de nouvelles cartes d'anime directement depuis le fichier JSON, vous pouvez utiliser le script **add_anime.py** fourni. Ce script génère des cartes d'anime à partir des données du fichier JSON.
+1. **Cloner le repository**
+```bash
+git clone https://github.com/YannisAd/myAnimeList.git
+cd myAnimeList
+```
 
-## Voici comment utiliser le script :
+2. **Ouvrir l'application**
+```bash
+# Ouvrir index.html dans votre navigateur
+open index.html
+# ou
+python -m http.server 8000  # Pour un serveur local
+```
 
-Exécutez le script **add_anime.py**.
-Le script lira le fichier JSON et générera les cartes d'anime.
-Les cartes générées seront automatiquement mises à jour et enregistrées dans le fichier. Vous n'avez pas besoin de supprimer le fichier avant d'exécuter le script.
+3. **C'est prêt !** 🎉
 
-## Contributions
+---
 
-Les contributions à ce projet sont les bienvenues. Si vous avez des améliorations, des corrections de bugs ou des suggestions de nouvelles fonctionnalités, n'hésitez pas à soumettre une demande de fusion (pull request). De plus, vous pouvez ouvrir une issue pour signaler des bugs ou fournir des commentaires.
+## 🎮 Utilisation
 
+### 🔰 Premier lancement
+1. Cliquez sur "**Ajouter**" pour ajouter votre premier anime
+2. Recherchez un anime dans la barre de recherche
+3. Cliquez sur "**Ajouter à ma liste**" 
+4. Personnalisez avec une note et des commentaires
 
-## Remerciements
+### 📚 Gestion de votre liste
+- **Noter** : Cliquez sur les étoiles dans les détails
+- **Commenter** : Ajoutez vos impressions personnelles
+- **Filtrer** : Utilisez les filtres par genre ou note
+- **Rechercher** : Tapez dans la barre de recherche
 
-Ce projet utilise l'API MyAnimeList et l'API Jikan. Un grand merci aux développeurs et contributeurs de ces API pour la fourniture des données utilisées dans ce projet.
+### 🔍 Découverte
+- **Épisodes** : Consultez la liste complète des épisodes
+- **Recommandations** : Découvrez des animes similaires
+- **Navigation** : Explorez les suggestions directement
 
+---
 
+## 🛠️ Technologies Utilisées
 
+<div align="center">
 
+| Frontend | Styling | API | Outils |
+|:--------:|:-------:|:---:|:------:|
+| ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white) | ![TailwindCSS](https://img.shields.io/badge/-TailwindCSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white) | ![Jikan API](https://img.shields.io/badge/-Jikan_API-2E51A2?style=flat-square&logo=myanimelist&logoColor=white) | ![Git](https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white) |
+| ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) | ![Font Awesome](https://img.shields.io/badge/-Font_Awesome-528DD7?style=flat-square&logo=font-awesome&logoColor=white) | ![MyAnimeList](https://img.shields.io/badge/-MyAnimeList-2E51A2?style=flat-square&logo=myanimelist&logoColor=white) | ![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github&logoColor=white) |
+| ![jQuery](https://img.shields.io/badge/-jQuery-0769AD?style=flat-square&logo=jquery&logoColor=white) | ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=flat-square&logo=css3&logoColor=white) | | |
 
+</div>
 
+### 🏗️ Architecture
+- **Frontend** : Vanilla JavaScript + jQuery pour les interactions
+- **Styling** : TailwindCSS pour un design moderne et responsive
+- **API** : Jikan API v4 (API non-officielle MyAnimeList)
+- **Storage** : LocalStorage pour la persistance des données
+- **Animations** : CSS3 + transitions custom
 
+---
 
+## 📊 Statistiques du Projet
 
+```
+📁 Structure du projet
+├── 📄 index.html              # Page principale
+├── 📄 anime-details.html      # Page de détails
+├── 📁 Javascript/
+│   └── 📄 script.js           # Logique principale
+├── 📁 img/
+│   └── 🖼️ screenshots/       # Captures d'écran
+└── 📄 README.md               # Documentation
+```
 
---------------------------------------------------------------------------------------------
+---
 
+## 🤝 Contribution
 
+Les contributions sont les bienvenues ! Voici comment contribuer :
 
---------------------------------------------------------------------------------------------
+### 🔧 Development Setup
+1. Fork le projet
+2. Créer une branche feature (`git checkout -b feature/...`)
+3. Commit vos changements (`git commit -m 'Add some ...'`)
+4. Push vers la branche (`git push origin feature/...`)
+5. Ouvrir une Pull Request
 
+---
 
+## 🐛 Issues Connues
 
+### 🔍 Limitations actuelles
+- [ ] Rate limiting de l'API Jikan (1 req/sec)
+- [ ] Pas de support offline complet
+- [ ] Export limité au format JSON
 
+---
 
+## 📄 Licence
 
+Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
 
-# Anime List Project
+```
+MIT License
 
-This project is a dynamic anime list that allows you to keep track of the anime you have watched. It provides filtering and search functionalities to easily find and organize your anime entries. The data for this project is retrieved from the MyAnimeList API.
+Copyright (c) 2024 YannisAd
 
-**Note :** This is a test version of the project, and for demonstration purposes, the data has been obtained using the free Jikan API and stored in a JSON file.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software...
+```
 
-## Instructions
+---
 
-To **view the anime list**, please click on the **index.html** file.
+## 🙏 Remerciements
 
-If you want to **add a new anime** to the list, follow these steps:
+- **[Jikan API](https://jikan.moe/)** pour l'API MyAnimeList gratuite
+- **[TailwindCSS](https://tailwindcss.com/)** pour le framework CSS
+- **[Font Awesome](https://fontawesome.com/)** pour les icônes
+- **[MyAnimeList](https://myanimelist.net/)** pour les données d'animes
+- La communauté anime pour l'inspiration ! 🎌
 
-- Find the **ID** on [ MyAnimeList](https://myanimelist.net).
-- Run the **add_anime.py** file using the following command in your terminal:
-`python add_anime.py`
+---
 
+<div align="center">
 
-## Features 
+### ⭐ Si ce projet vous plaît, n'hésitez pas à lui donner une étoile !
 
-- List and display anime entries with relevant details such as title, episodes, synopsis, and more.
-- Filter the anime list based on different categories using the provided filter tools.
-- Search for specific anime titles using the search bar.
-- Click on an anime card to view detailed information in a popup.
+**Fait avec ❤️ par YannisAd**
 
+[![GitHub followers](https://img.shields.io/github/followers/YannisAd?style=social)](https://github.com/YannisAd)
 
-## Getting Started
+[⬆ Retour en haut](#-myanimelist)
 
-To launch the website, simply open the index.html file in your preferred web browser. The anime list will be displayed, and you can start exploring and interacting with the features.
-
-
-## Updating the Anime List
-
-If you want to modify or add new anime cards directly from the JSON file, you can use the provided **add_anime.py** script. This script generates anime cards based on the data from the JSON file.
-
-Here's how to use the script:
-
-Run the **add_anime.py script**.
-The script will read the JSON file and generate the anime cards.
-The generated cards will be automatically updated and saved to the file. You don't need to delete the file before running the script.
-
-
-## Contributions
-
-Contributions to this project are welcome. If you have any improvements, bug fixes, or new feature suggestions, feel free to submit a pull request. Additionally, you can open an issue to report any bugs or provide feedback.
-
-
-## Acknowledgements
-
-This project utilizes the MyAnimeList API and the Jikan API. Special thanks to the developers and contributors of these APIs for providing the data used in this project.
-
-
+</div>
