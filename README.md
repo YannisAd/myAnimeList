@@ -186,23 +186,6 @@ copies of the Software...
 
 ---
 
-## 🙏 Remerciements
-
-- **[Jikan API](https://jikan.moe/)** pour l'API MyAnimeList gratuite
-- **[TailwindCSS](https://tailwindcss.com/)** pour le framework CSS
-- **[Font Awesome](https://fontawesome.com/)** pour les icônes
-- **[MyAnimeList](https://myanimelist.net/)** pour les données d'animes
-- La communauté anime pour l'inspiration ! 🎌
-
----
-
-<div align="center">
-
-### ⭐ Si ce projet vous plaît, n'hésitez pas à lui donner une étoile !
-
-**Fait avec ❤️ par YannisAd**
-
-[![GitHub followers](https://img.shields.io/github/followers/YannisAd?style=social)](https://github.com/YannisAd)
 
 [⬆ Retour en haut](#-myanimelist)
 
