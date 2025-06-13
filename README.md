@@ -10,7 +10,7 @@
 
 **Une application web pour gérer et découvrir vos animes préférés**
 
-[🚀 Démo en ligne](#)  • [🐛 Signaler un bug](../../issues)
+[🚀 Démo en ligne](https://my-anime-list-peach.vercel.app/)  • [🐛 Signaler un bug](../../issues)
 
 </div>
 
